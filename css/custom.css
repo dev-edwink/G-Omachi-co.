@@ -1,0 +1,188 @@
+
+@font-face{
+  font-family: 'Gilroy', 'Plus Jakarta Sans', 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  src:url('fonts/Gilroy-SemiBold.woff2') format('woff2'),
+      url('fonts/Gilroy-SemiBold.woff') format('woff');
+  font-weight:600;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family: 'Gilroy', 'Plus Jakarta Sans', 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  src:url('fonts/Gilroy-Bold.woff2') format('woff2'),
+      url('fonts/Gilroy-Bold.woff') format('woff');
+  font-weight:700;
+  font-style:normal;
+  font-display:swap;
+}
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{background:#fff}
+h1,h2,h3,.font-serif{font-family: 'Gilroy', 'Plus Jakarta Sans', 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; font-weight:600;letter-spacing:-.015em}
+h1{font-weight:700}
+:focus-visible{outline:2px solid #1f1a10;outline-offset:3px}
+.marq{overflow:hidden;white-space:nowrap}
+.marq .tr{display:inline-flex;gap:2.5rem;padding-right:2.5rem;animation:marq 30s linear infinite}
+.marq:hover .tr{animation-play-state:paused}
+@keyframes marq{to{transform:translateX(-50%)}}
+.snap{scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.snap>*{scroll-snap-align:start}
+.snap::-webkit-scrollbar{height:6px}
+.snap::-webkit-scrollbar-thumb{background:#eadfc4;border-radius:99px}
+.pill{display:inline-flex;align-items:center;gap:.6rem}
+.arrow{width:44px;height:44px;border-radius:999px;display:grid;place-items:center;flex:none;transition:transform .25s}
+.tile:hover .arrow{transform:translate(3px,-3px)}
+#menu{transform:translateX(100%);transition:transform .4s cubic-bezier(.32,.72,0,1);box-shadow:-30px 0 60px -24px rgba(31,26,16,.35)}
+#menu.open{transform:translateX(0)}
+#menuOverlay{opacity:0;pointer-events:none;transition:opacity .35s ease;backdrop-filter:blur(2px)}
+#menuOverlay.open{opacity:1;pointer-events:auto}
+[popover]{margin:0;padding:0;border:none;overflow:visible}
+#exploreMenu{position:fixed;background:#fff;border:1px solid #eadfc4;border-radius:.5rem;min-width:180px;box-shadow:0 16px 32px -16px rgba(31,26,16,.28);padding:.35rem}
+#exploreMenu ul{display:flex;flex-direction:column}
+#exploreMenu a{display:block;padding:.65rem .9rem;font-family: 'Gilroy', 'Plus Jakarta Sans', 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;;font-weight:600;font-size:1rem;color:#1f1a10;border-radius:.35rem;text-transform:none;letter-spacing:normal}
+#exploreMenu a:hover{background:#fbf7ec;color:#8a6512}
+.navdrop.open .navdrop-btn svg{transform:rotate(180deg)}
+#menu ul a{position:relative;display:flex;align-items:center;justify-content:space-between;transition:color .2s,padding-left .2s}
+#menu ul a:hover{color:#8a6512;padding-left:.3rem}
+#menu ul a .go{opacity:0;transform:translateX(-4px);transition:opacity .2s,transform .2s;color:#c9a227;font-size:1rem}
+#menu ul a:hover .go{opacity:1;transform:translateX(0)}
+#menu ul li a{display:flex;align-items:center}
+#menu ul li a span.label{flex:1}
+.fld{width:100%;background:transparent;border-bottom:1px solid #4a4230;padding:.5rem 0;transition:border-color .2s}
+.fld:focus{outline:none;border-color:#c9a227}
+.fld:invalid:not(:placeholder-shown){border-color:#d98a5f}
+#exploreMenu{opacity:0;transform:translateY(-6px) scale(.98);transition:opacity .18s ease,transform .18s ease}
+#exploreMenu:popover-open{opacity:1;transform:translateY(0) scale(1)}
+.stat-num{font-variant-numeric:tabular-nums}
+.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition:opacity .5s ease}
+.ph-img.show{opacity:1}
+.hero-img{opacity:0;transform:scale(1.07);transition:opacity .8s ease;animation:heroZoom 9s ease-out forwards}
+.hero-img.show{opacity:1}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-copy{opacity:0;animation:heroUp .8s ease-out .2s forwards}
+@keyframes heroUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:639px){
+  #menu ul li a{padding-top:.85rem;padding-bottom:.85rem}
+  .clamp-3{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .values-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:1rem;padding-bottom:.25rem}
+  .values-card{scroll-snap-align:start;flex:0 0 78%;background:#fbf7ec;border:1px solid #eadfc4;border-radius:.4rem;padding:1.1rem}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+#siteHeader{color:#fff}
+#siteHeader nav{color:rgba(255,255,255,.85)}
+#siteHeader nav a:hover,#siteHeader .navdrop-btn:hover{color:#f1dea0}
+#siteHeader .text-brass{color:#f1dea0}
+#siteHeader #menuBtn{border-color:rgba(255,255,255,.5)}
+#siteHeader #menuBtn span{background:#fff}
+#siteHeader.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom-color:#eadfc4;color:#1f1a10}
+#siteHeader.scrolled nav{color:#6b6455}
+#siteHeader.scrolled nav a:hover,#siteHeader.scrolled .navdrop-btn:hover{color:#8a6512}
+#siteHeader.scrolled .text-brass{color:#8a6512}
+#siteHeader.scrolled #menuBtn{border-color:#eadfc4}
+#siteHeader.scrolled #menuBtn span{background:#1f1a10}
+@media(max-width:639px){
+  #teamGrid .team-extra{max-height:0;opacity:0;overflow:hidden;transition:max-height .45s ease,opacity .35s ease;pointer-events:none}
+  #teamGrid.expanded .team-extra{max-height:900px;opacity:1;pointer-events:auto}
+  #areasGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem 1rem;overflow-x:visible}
+  #areasGrid .tile{width:100%}
+  #areasGrid .tile>div{width:100%;height:190px}
+  #areasGrid .practice-extra{max-height:0;opacity:0;overflow:hidden;pointer-events:none;transition:max-height .45s ease,opacity .35s ease}
+  #areasGrid.expanded .practice-extra{max-height:300px;opacity:1;pointer-events:auto}
+  /* Give the trailing tile (odd count, so it'd otherwise sit alone with an
+     empty cell beside it) the full row instead of leaving a gap. */
+  #areasGrid .tile:last-child{grid-column:1/-1}
+  #areasGrid .tile:last-child>div{height:170px}
+}
+@media(min-width:640px){
+  #teamGrid .team-extra{max-height:none!important;opacity:1!important;overflow:visible!important;pointer-events:auto!important}
+}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,.84,.44,1)}
+.reveal.in-view{opacity:1;transform:translateY(0)}
+.reveal-stagger>*{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s cubic-bezier(.16,.84,.44,1)}
+.reveal-stagger.in-view>*{opacity:1;transform:translateY(0)}
+.reveal-stagger>*:nth-child(2){transition-delay:.07s}
+.reveal-stagger>*:nth-child(3){transition-delay:.14s}
+.reveal-stagger>*:nth-child(4){transition-delay:.21s}
+.reveal-stagger>*:nth-child(5){transition-delay:.28s}
+.reveal-stagger>*:nth-child(6){transition-delay:.35s}
+.reveal-stagger>*:nth-child(7){transition-delay:.42s}
+.reveal-stagger>*:nth-child(8){transition-delay:.49s}
+.reveal-stagger>*:nth-child(9){transition-delay:.56s}
+.reveal-stagger>*:nth-child(10){transition-delay:.63s}
+
+/* ===== Nav, dropdown & hero refresh ===== */
+.brand{font-size:1.5rem;font-weight:700;letter-spacing:-.02em;line-height:1}
+.brand .amp{padding:0 .1em}
+@media(max-width:639px){
+  .brand{font-size:1.05rem;letter-spacing:-.01em}
+}
+
+#siteHeader nav a,#siteHeader .navdrop-btn{position:relative;padding:.4rem 0;transition:color .25s ease}
+#siteHeader nav a::after{content:'';position:absolute;left:0;right:100%;bottom:-2px;height:1.5px;background:currentColor;transition:right .3s cubic-bezier(.4,0,.2,1)}
+#siteHeader nav a:hover::after{right:0}
+#siteHeader .navdrop-btn svg{transition:transform .25s ease}
+.navdrop.open .navdrop-btn{color:inherit}
+
+#exploreMenu{width:500px;max-width:calc(100vw - 32px);padding:1.35rem;border-radius:1rem;border-color:#eee0bb}
+#exploreMenu::before{content:'';position:absolute;top:-5px;left:22px;width:10px;height:10px;background:#fff;border-left:1px solid #eadfc4;border-top:1px solid #eadfc4;transform:rotate(45deg)}
+#exploreMenu .dd-heading{margin:0 .35rem .85rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#8a8371}
+#exploreMenu .dd-areas{display:grid;grid-template-columns:1fr 1fr;gap:.4rem 1rem}
+#exploreMenu .dd-areas a{display:block;padding:.6rem .7rem;font-family:'Inter','Instrument Sans',-apple-system,BlinkMacSystemFont,sans-serif;font-weight:400;font-size:.92rem;line-height:1.35;color:#3a3527;border-radius:.55rem;transition:background .2s ease,color .2s ease}
+#exploreMenu .dd-areas a:hover{background:#fbf7ec;color:#8a6512}
+#exploreMenu .dd-divider{height:1px;background:#eee0bb;margin:1rem .35rem .75rem}
+#exploreMenu .dd-office{display:flex;align-items:center;gap:.85rem;padding:.65rem .7rem;border-radius:.65rem;transition:background .2s ease}
+#exploreMenu .dd-office:hover{background:#fbf7ec}
+#exploreMenu .dd-ico{flex:none;width:36px;height:36px;border-radius:999px;background:#fbf7ec;color:#8a6512;display:grid;place-items:center;font-size:1rem;transition:background .2s ease,color .2s ease,transform .2s ease}
+#exploreMenu .dd-office:hover .dd-ico{background:#8a6512;color:#fff;transform:scale(1.06)}
+#exploreMenu .dd-copy{flex:1;line-height:1.25}
+#exploreMenu .dd-title{display:block;font-weight:600;font-size:.95rem;font-family: 'Gilroy', 'Plus Jakarta Sans', 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;}
+#exploreMenu .dd-sub{display:block;font-size:.75rem;color:#8a8371;font-weight:400;margin-top:1px}
+#exploreMenu .dd-go{flex:none;opacity:0;transform:translateX(-4px);color:#c9a227;transition:opacity .2s ease,transform .2s ease}
+#exploreMenu .dd-office:hover .dd-go{opacity:1;transform:translateX(0)}
+
+.btn{transition:transform .25s ease,box-shadow .25s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(138,101,18,.55)}
+
+.eyebrow{display:inline-flex;align-items:center;gap:.65rem;text-transform:uppercase}
+.eyebrow::before{content:'';width:26px;height:1.5px;background:#c9a227;flex:none}
+.hero-copy h1{text-shadow:0 2px 20px rgba(0,0,0,.3)}
+
+.arrow:hover{transform:scale(1.08)}
+.tile:hover .arrow{transform:translate(3px,-3px) scale(1.05)}
+
+/* Inter as the default body font wherever no other font is set */
+body,.font-sans{font-family:'Inter','Instrument Sans',-apple-system,BlinkMacSystemFont,sans-serif}
+button,input,select,textarea{font-family:inherit}
+
+/* Practice-area carousel scroll buttons: normal flex siblings placed beside
+   the scrolling row (not absolutely positioned over the tiles). Desktop-only,
+   as before; .is-hidden fades a button out once there's nothing left to
+   scroll in that direction. */
+.areas-nav-btn{display:none;flex:none;width:44px;height:44px;border-radius:999px;background:#fff;border:1px solid #eadfc4;box-shadow:0 10px 24px -10px rgba(31,26,16,.35);align-items:center;justify-content:center;font-size:1.1rem;color:#1f1a10;transition:background .2s ease,color .2s ease,transform .2s ease,opacity .2s ease,visibility .2s ease}
+.areas-nav-btn:hover{background:#8a6512;color:#fff}
+.areas-nav-btn.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+@media(min-width:640px){
+  .areas-nav-btn{display:flex}
+}
+
+/* Practice-area card titles: keep them compact so they don't crowd the card */
+.tile-title{display:block;font-size:1.05rem;line-height:1.25;letter-spacing:-.01em}
+.tile .arrow{width:36px;height:36px;font-size:.85rem}
+@media(max-width:639px){
+  #areasGrid .tile-title{font-size:.92rem;line-height:1.2}
+  #areasGrid .tile .p-5{padding:.8rem}
+  #areasGrid .tile .arrow{width:28px;height:28px;font-size:.75rem;margin-top:.5rem}
+}
+
+/* Practice-area caption shown below the image on mobile, in place of the
+   overlay title (which is hidden there). A <p>, not a <div>, so it's not
+   caught by the "#areasGrid .tile>div" image-box rule above; the arrow
+   sits in a horizontal row here, so cancel the vertical-stack margin the
+   overlay arrow gets in the mobile rule just above. */
+@media(max-width:639px){
+  #areasGrid .tile .tile-caption .arrow{margin-top:0}
+}
+
+/* Back-to-home link used on practice-area and lawyer profile pages */
+.back-home{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;font-weight:600;color:#8a6512;margin-bottom:1.25rem;transition:gap .2s ease,color .2s ease}
+.back-home:hover{gap:.75rem;color:#c9a227}

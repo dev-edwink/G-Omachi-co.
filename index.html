@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>G. Omachi &amp; Co | Barristers, Solicitors &amp; Notary Public</title>
+<link rel="stylesheet" href="output.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="font-Inter text-ink text-[17px] leading-relaxed">
+
+<header id="siteHeader" class="fixed top-0 inset-x-0 z-20 bg-transparent border-b border-transparent transition-colors duration-300">
+  <div class="max-w-[1200px] mx-auto px-6 h-[76px] flex items-center justify-between">
+    <a href="#top" class="brand font-serif flex items-center gap-2.5">
+      G. Omachi <span class="text-brass amp">&amp;</span> Co
+    </a>
+    <nav class="hidden nav:flex items-center gap-8 text-[1rem] font-semibold text-muted">
+      <a href="#about" class="hover:text-ink">About Us</a>
+      
+      <div class="navdrop relative">
+        <button type="button" popovertarget="exploreMenu" class="navdrop-btn inline-flex items-center gap-1.5 hover:text-ink" aria-expanded="false">
+          Explore
+          <svg class="w-3 h-3 transition-transform duration-200" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="exploreMenu" popover>
+          <p class="dd-heading">Practice Areas</p>
+          <ul class="dd-areas">
+            <li><a href="practice/litigation.html">Litigation &amp; Dispute Resolution</a></li>
+            <li><a href="practice/corporate-finance.html">Corporate Finance</a></li>
+            <li><a href="practice/banking-insurance.html">Banking &amp; Insurance</a></li>
+            <li><a href="practice/real-estate.html">Real Estate</a></li>
+            <li><a href="practice/arbitration-mediation.html">Arbitration &amp; Mediation</a></li>
+            <li><a href="practice/corporate-commercial.html">Corporate &amp; Commercial Matters</a></li>
+            <li><a href="practice/taxation.html">Taxation</a></li>
+            <li><a href="practice/charities-ngos.html">Charities &amp; NGOs</a></li>
+            <li><a href="practice/legal-audit.html">Legal Audit</a></li>
+            <li><a href="practice/labour-employment.html">Labour &amp; Employment</a></li>
+            <li><a href="practice/pro-bono.html">Pro Bono</a></li>
+          </ul>
+          <div class="dd-divider"></div>
+          <a href="#offices" class="dd-office"><span class="dd-copy"><span class="dd-title">Offices</span><span class="dd-sub">Where to find us</span></span><span class="dd-go">&rarr;</span></a>
+        </div>
+      </div>
+      <a href="#attorneys" class="hover:text-ink">Our Lawyers</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#contact-form" class="hidden nav:inline-flex btn bg-gold text-white font-semibold text-[.9rem] px-6 py-3 rounded-full hover:bg-[#b8921f]">Book a consultation</a>
+      <button id="menuBtn" class="nav:hidden w-11 h-11 rounded-full border border-line grid place-content-center" aria-label="Open menu" aria-expanded="false">
+        <span class="block w-5 h-0.5 bg-ink mb-1"></span><span class="block w-5 h-0.5 bg-ink mb-1"></span><span class="block w-5 h-0.5 bg-ink"></span>
+      </button>
+    </div>
+  </div>
+
+</header>
+
+<div id="menuOverlay" class="nav:hidden fixed inset-0 bg-ink/50 z-30"></div>
+<div id="menu" class="nav:hidden fixed inset-y-0 right-0 z-40 w-[82vw] max-w-[340px] min-h-screen bg-white flex flex-col border-l-2 border-gold">
+  <div class="flex items-center justify-between px-6 h-[76px] border-b border-line flex-none">
+    <span class="text-[.7rem] tracking-[.15em] uppercase text-brass font-semibold">Menu</span>
+    <button id="menuClose" class="w-11 h-11 rounded-full border border-line grid place-items-center flex-none hover:bg-panel hover:border-brass transition-colors" aria-label="Close menu">&times;</button>
+  </div>
+  <ul class="flex flex-col px-6 pt-6 text-[1.35rem] font-serif flex-1 overflow-y-auto">
+    <li><a href="#about" class="py-4 border-b border-line"><span class="label">About Us</span><span class="go">&rarr;</span></a></li>
+    <li><a href="#attorneys" class="py-4 border-b border-line"><span class="label">Our Lawyers</span><span class="go">&rarr;</span></a></li>
+    <li><a href="#areas" class="py-4 border-b border-line"><span class="label">Practice Areas</span><span class="go">&rarr;</span></a></li>
+    <li><a href="#offices" class="py-4 border-b border-line"><span class="label">Offices</span><span class="go">&rarr;</span></a></li>
+  </ul>
+  <div class="p-6 border-t border-line flex-none grid gap-4">
+    <a href="#contact-form" class="btn block text-center bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f]">Book a consultation</a>
+    <p class="text-[.8rem] text-muted text-center">0806 371 0358 &middot; 0802 945 4213</p>
+  </div>
+</div>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="relative min-h-screen max-h-full sm:h-auto sm:max-h-none lg:h-[620px] bg-[radial-gradient(circle_at_20%_0%,#f3dd97,transparent_55%),radial-gradient(circle_at_90%_20%,#e3c25a,transparent_45%),linear-gradient(160deg,#fbf7ec,#e9d9a8_60%,#c9a227)]">
+      <img src="images/hero.jpg" alt="" class="hero-img object-top absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" onload="this.classList.add('show')" onerror="this.remove()">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/25 to-ink/10"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-ink/45 via-ink/5 to-transparent"></div>
+    <div class="absolute inset-0 max-w-[1200px] mx-auto px-6 flex flex-col justify-end pb-10 sm:pb-16">
+      <div class="hero-copy">
+        <p class="eyebrow text-gold font-semibold tracking-wide text-[.75rem] sm:text-[.85rem] mb-3">Barristers &amp; solicitors, notary public, mediators</p>
+        <h1 class="text-white text-[clamp(1.8rem,7vw,4rem)] max-w-[18ch] leading-[1.1] sm:leading-[1.05]">Legal advice you can actually act on.</h1>
+        <p class="text-white/80 max-w-[52ch] mt-4 mb-7 text-[.95rem] sm:text-base">We take the time to understand what you're actually trying to achieve, then stay on the file until it's done and not just for the length of one transaction.</p>
+        <div class="pill">
+          <a href="#contact-form" class="bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f]">Book a consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="marq bg-ink py-4" aria-hidden="true">
+    <div class="tr">
+      <span class="repeat font-serif text-xl text-[#f1dea0] flex items-center gap-10">
+        <span>Notary Public</span><i class="w-2 h-2 bg-gold rotate-45"></i>
+        <span>Chartered Mediators &amp; Conciliators</span><i class="w-2 h-2 bg-gold rotate-45"></i>
+        <span>Active Throughout Nigeria Since 2019</span><i class="w-2 h-2 bg-gold rotate-45"></i>
+        <span>Civil &amp; Criminal Law Jurisdictions</span><i class="w-2 h-2 bg-gold rotate-45"></i>
+      </span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-[1200px] mx-auto px-6 py-20 border-t-2 border-gold">
+    <div class="reveal grid md:grid-cols-[1fr_1.4fr] gap-10">
+      <div>
+        <p class="text-[.85rem] tracking-wide text-brass font-semibold mb-2">About us</p>
+        <h2 class="text-3xl">Integrity, competence and advocacy.</h2>
+      </div>
+      <div>
+        <p class="text-muted mb-4">We're a small, hands-on set of barristers and solicitors who've spent the last decade in courtrooms and boardrooms across Nigeria advising local businesses, multinationals and individuals, Nigerian and foreign, across every civil and criminal jurisdiction in the country.</p>
+        <p class="text-muted mb-6">Most of what we do is detail work: reviewing documents, negotiating terms, and turning up in court when a matter goes that far. We'd rather be known for doing that well, consistently, than for how we describe ourselves.</p>
+        <div class="flex gap-10 mb-8 flex-wrap stat-row">
+          <div><b class="font-serif text-4xl text-brass block stat-num" data-count="10" data-suffix="+">0</b><span class="text-muted text-sm">years active practice</span></div>
+          <div><b class="font-serif text-4xl text-brass block stat-num" data-count="13" data-suffix="">0</b><span class="text-muted text-sm">areas of practice</span></div>
+          <div><b class="font-serif text-4xl text-brass block stat-num" data-count="5" data-suffix="">0</b><span class="text-muted text-sm">lawyers on our team</span></div>
+        </div>
+        <div class="pill"><a href="#areas" class="bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f]">See our services</a></div>
+      </div>
+    </div>
+    <!-- Values -->
+    <div class="values-grid reveal-stagger grid sm:grid-cols-3 gap-6 mt-14 pt-10 border-t border-line">
+      <div class="values-card">
+        <span class="text-brass text-2xl font-serif">Goal</span>
+        <p class="text-muted text-[.95rem] mt-2 clamp-3">Advice you can actually act on, at a cost that's clear from the start, not padded, not vague.</p>
+      </div>
+      <div class="values-card">
+        <span class="text-brass text-2xl font-serif">Our work</span>
+        <p class="text-muted text-[.95rem] mt-2 clamp-3">We prepare every matter as if it's headed to trial, even when we expect it to settle. It rarely hurts to be over-prepared.</p>
+      </div>
+      <div class="values-card">
+        <span class="text-brass text-2xl font-serif">Philosophy</span>
+        <p class="text-muted text-[.95rem] mt-2 clamp-3">We'll tell a client when their instructions won't hold up, even when it would be easier to just do as we're told.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIRM ATTORNEYS -->
+  <section id="attorneys" class="max-w-[1200px] mx-auto px-6 py-20 border-t-2 border-gold">
+    <div class="reveal flex flex-wrap justify-between items-end gap-6 mb-10">
+      <div>
+        <p class="text-[.85rem] tracking-wide text-brass font-semibold mb-2">The team</p>
+        <h2 class="text-3xl max-w-[20ch]">The lawyers handling your matter.</h2>
+      </div>
+      <p class="text-muted max-w-[42ch]">Every file is led by a partner so you always know exactly who to call.</p>
+    </div>
+    <div id="teamGrid" class="reveal-stagger grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <article class="group">
+        <a href="team/gabriel-omachi.html" class="block">
+          <div class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#3a2e12] to-[#8a6512] relative flex items-center justify-center">
+            <img src="images/team/gabriel-omachi.jpg" alt="Gabriel Omachi" class="ph-img" loading="eager" onload="this.classList.add('show')" onerror="this.remove()">
+            <span class="text-white/90 font-serif text-5xl">GO</span>
+            <div class="absolute inset-0 flex items-end p-5"><span class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm">Principal Partner</span></div>
+          </div>
+        </a>
+        <a href="team/gabriel-omachi.html" class="block"><h3 class="font-serif text-xl mt-4 group-hover:text-brass transition-colors">Gabriel Omachi (KSM)</h3></a>
+        <p class="text-brass text-[.85rem] font-medium mb-3">LLB, BL, LLM, PhD (in view), Notary Public</p>
+        <a href="team/gabriel-omachi.html" class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass">View profile</a>
+      </article>
+      <article class="group">
+        <a href="team/lynda-omachi.html" class="block">
+          <div class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#5c4a1a] to-[#c9a227] relative flex items-center justify-center">
+            <img src="images/team/lynda-omachi.jpg" alt="Lynda Dadel Omachi" class="ph-img" loading="eager" onload="this.classList.add('show')" onerror="this.remove()">
+            <span class="text-white/90 font-serif text-5xl">LO</span>
+            <div class="absolute inset-0 flex items-end p-5"><span class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm">Partner</span></div>
+          </div>
+        </a>
+        <a href="team/lynda-omachi.html" class="block"><h3 class="font-serif text-xl mt-4 group-hover:text-brass transition-colors">Lynda Dadel Omachi (LSM)</h3></a>
+        <p class="text-brass text-[.85rem] font-medium mb-3">LLB, BL, LLM</p>
+        <a href="team/lynda-omachi.html" class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass">View profile </a>
+      </article>
+      <article class="group team-extra">
+        <a href="team/denilson-obodo.html" class="block">
+          <div class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#1f1a10] to-[#5f5847] relative flex items-center justify-center">
+            <img src="images/team/denilson-obodo.jpg" alt="Denilson Kelechi Obodo" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()">
+            <span class="text-white/90 font-serif text-5xl">DO</span>
+            <div class="absolute inset-0 flex items-end p-5"><span class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm">Partner</span></div>
+          </div>
+        </a>
+        <a href="team/denilson-obodo.html" class="block"><h3 class="font-serif text-xl mt-4 group-hover:text-brass transition-colors">Denilson Kelechi Obodo</h3></a>
+        <p class="text-brass text-[.85rem] font-medium mb-3">OND, LLB, BL, LLM</p>
+        <a href="team/denilson-obodo.html" class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass">View profile </a>
+      </article>
+      <article class="group team-extra">
+        <a href="team/wemanne-ishaya.html" class="block">
+          <div class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#8a6512] to-[#e3c25a] relative flex items-center justify-center">
+            <img src="images/team/wemanne-ishaya.jpg" alt="Wemanne G. H. Ishaya" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()">
+            <span class="text-white/90 font-serif text-5xl">WI</span>
+            <div class="absolute inset-0 flex items-end p-5"><span class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm">Senior Associate</span></div>
+          </div>
+        </a>
+        <a href="team/wemanne-ishaya.html" class="block"><h3 class="font-serif text-xl mt-4 group-hover:text-brass transition-colors">Wemanne G. H. Ishaya (Mrs.)</h3></a>
+        <p class="text-brass text-[.85rem] font-medium mb-3">LLB, BL</p>
+        <a href="team/wemanne-ishaya.html" class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass">View profile </a>
+      </article>
+      <article class="group team-extra">
+        <a href="team/gabriel-adama.html" class="block">
+          <div class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#3a2e12] to-[#b48a14] relative flex items-center justify-center">
+            <img src="images/team/gabriel-adama.jpg" alt="Gabriel A. Adama" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()">
+            <span class="text-white/90 font-serif text-5xl">GA</span>
+            <div class="absolute inset-0 flex items-end p-5"><span class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm">Senior Associate</span></div>
+          </div>
+        </a>
+        <a href="team/gabriel-adama.html" class="block"><h3 class="font-serif text-xl mt-4 group-hover:text-brass transition-colors">Gabriel A. Adama</h3></a>
+        <p class="text-brass text-[.85rem] font-medium mb-3">Dip (CMC), LLB, LLM</p>
+        <a href="team/gabriel-adama.html" class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass">View profile </a>
+      </article>
+    </div>
+    <div class="sm:hidden mt-6 text-center">
+      <button type="button" id="teamShowMore" class="inline-flex items-center gap-2 text-[.85rem] font-semibold text-brass border border-line rounded-full px-5 py-2.5 hover:bg-panel">Show more <span class="text-[.7rem]">&darr;</span></button>
+    </div>
+  </section>
+
+  <!-- PRACTICE AREAS -->
+  <section id="areas" class="bg-panel border-y border-line py-16">
+    <div class="reveal max-w-[1200px] mx-auto px-6 mb-8">
+      <h2 class="text-3xl mb-2">Where we can help</h2>
+      <p class="text-muted max-w-[56ch]">A quick look at the areas we practice in. Tap any card to tell us about your matter.</p>
+    </div>
+    <div class="areas-scroll-wrap flex items-center gap-3 max-w-[1200px] mx-auto px-6">
+      <button type="button" id="areasPrev" class="areas-nav-btn areas-nav-prev is-hidden" aria-label="Scroll practice areas left">&larr;</button>
+      <div id="areasGrid" class="snap reveal-stagger flex gap-5 overflow-x-auto flex-1 min-w-0">
+      <a class="tile" href="practice/litigation.html"><div class="group relative w-[280px] h-[340px] flex-none rounded-sm overflow-hidden bg-gradient-to-br from-[#3a2e12] to-[#8a6512]"><img src="images/practice/litigation.jpg" alt="" class="ph-img" loading="eager" onload="this.classList.add('show')" onerror="this.remove()"><div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent hidden sm:block"></div><div class="absolute inset-0 hidden sm:flex flex-col justify-end p-5"><span class="text-white text-xl font-serif tile-title">Litigation &amp; Dispute Resolution</span><span class="arrow bg-white/20 text-white mt-3">&rarr;</span></div></div><p class="tile-caption sm:hidden m-0 mt-3 flex items-center justify-between gap-3"><span class="tile-title font-serif text-ink">Litigation &amp; Dispute Resolution</span><span class="arrow bg-panel border border-line text-ink">&rarr;</span></p></a>
+      <a class="tile" href="practice/corporate-finance.html"><div class="relative w-[280px] h-[340px] flex-none rounded-sm overflow-hidden bg-gradient-to-br from-[#5c4a1a] to-[#c9a227]"><img src="images/practice/corporate-finance.jpg" alt="" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()"><div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent hidden sm:block"></div><div class="absolute inset-0 hidden sm:flex flex-col justify-end p-5"><span class="text-white text-xl font-serif tile-title">Corporate Finance</span><span class="arrow bg-white/20 text-white mt-3">&rarr;</span></div></div><p class="tile-caption sm:hidden m-0 mt-3 flex items-center justify-between gap-3"><span class="tile-title font-serif text-ink">Corporate Finance</span><span class="arrow bg-panel border border-line text-ink">&rarr;</span></p></a>
+      <a class="tile" href="practice/banking-insurance.html"><div class="relative w-[280px] h-[340px] flex-none rounded-sm overflow-hidden bg-gradient-to-br from-[#1f1a10] to-[#5f5847]"><img src="images/practice/banking-insurance.jpg" alt="" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()"><div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent hidden sm:block"></div><div class="absolute inset-0 hidden sm:flex flex-col justify-end p-5"><span class="text-white text-xl font-serif tile-title">Banking &amp; Insurance</span><span class="arrow bg-white/20 text-white mt-3">&rarr;</span></div></div><p class="tile-caption sm:hidden m-0 mt-3 flex items-center justify-between gap-3"><span class="tile-title font-serif text-ink">Banking &amp; Insurance</span><span class="arrow bg-panel border border-line text-ink">&rarr;</span></p></a>
+      <a class="tile" href="practice/real-estate.html"><div class="relative w-[280px] h-[340px] flex-none rounded-sm overflow-hidden bg-gradient-to-br from-[#8a6512] to-[#e3c25a]"><img src="images/practice/real-estate.jpg" alt="" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()"><div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent hidden sm:block"></div><div class="absolute inset-0 hidden sm:flex flex-col justify-end p-5"><span class="text-white text-xl font-serif tile-title">Real Estate</span><span class="arrow bg-white/20 text-white mt-3">&rarr;</span></div></div><p class="tile-caption sm:hidden m-0 mt-3 flex items-center justify-between gap-3"><span class="tile-title font-serif text-ink">Real Estate</span><span class="arrow bg-panel border border-line text-ink">&rarr;</span></p></a>
+      <a class="tile practice-extra" href="practice/arbitration-mediation.html"><div class="relative w-[280px] h-[340px] flex-none rounded-sm overflow-hidden bg-gradient-to-br from-[#3a2e12] to-[#b48a14]"><img src="images/practice/arbitration-mediation.jpg" alt="" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()"><div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent hidden sm:block"></div><div class="absolute inset-0 hidden sm:flex flex-col justify-end p-5"><span class="text-white text-xl font-serif tile-title">Arbitration &amp; Mediation</span><span class="arrow bg-white/20 text-white mt-3">&rarr;</span></div></div><p class="tile-caption sm:hidden m-0 mt-3 flex items-center justify-between gap-3"><span class="tile-title font-serif text-ink">Arbitration &amp; Mediation</span><span class="arrow bg-panel border border-line text-ink">&rarr;</span></p></a>
+      <a class="tile practice-extra" href="practice/corporate-commercial.html"><div class="relative w-[280px] h-[340px] flex-none rounded-sm overflow-hidden bg-gradient-to-br from-[#5f5847] to-[#1f1a10]"><img src="images/practice/corporate-commercial.jpg" alt="" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()"><div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent hidden sm:block"></div><div class="absolute inset-0 hidden sm:flex flex-col justify-end p-5"><span class="text-white text-xl font-serif tile-title">Corporate &amp; Commercial Matters</span><span class="arrow bg-white/20 text-white mt-3">&rarr;</span></div></div><p class="tile-caption sm:hidden m-0 mt-3 flex items-center justify-between gap-3"><span class="tile-title font-serif text-ink">Corporate &amp; Commercial Matters</span><span class="arrow bg-panel border border-line text-ink">&rarr;</span></p></a>
+      <a class="tile practice-extra" href="practice/taxation.html"><div class="relative w-[280px] h-[340px] flex-none rounded-sm overflow-hidden bg-gradient-to-br from-[#c9a227] to-[#3a2e12]"><img src="images/practice/taxation.jpg" alt="" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()"><div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent hidden sm:block"></div><div class="absolute inset-0 hidden sm:flex flex-col justify-end p-5"><span class="text-white text-xl font-serif tile-title">Taxation</span><span class="arrow bg-white/20 text-white mt-3">&rarr;</span></div></div><p class="tile-caption sm:hidden m-0 mt-3 flex items-center justify-between gap-3"><span class="tile-title font-serif text-ink">Taxation</span><span class="arrow bg-panel border border-line text-ink">&rarr;</span></p></a>
+      <a class="tile practice-extra" href="practice/charities-ngos.html"><div class="relative w-[280px] h-[340px] flex-none rounded-sm overflow-hidden bg-gradient-to-br from-[#8a6512] to-[#5c4a1a]"><img src="images/practice/charities-ngos.jpg" alt="" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()"><div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent hidden sm:block"></div><div class="absolute inset-0 hidden sm:flex flex-col justify-end p-5"><span class="text-white text-xl font-serif tile-title">Charities &amp; NGOs</span><span class="arrow bg-white/20 text-white mt-3">&rarr;</span></div></div><p class="tile-caption sm:hidden m-0 mt-3 flex items-center justify-between gap-3"><span class="tile-title font-serif text-ink">Charities &amp; NGOs</span><span class="arrow bg-panel border border-line text-ink">&rarr;</span></p></a>
+      <a class="tile practice-extra" href="practice/legal-audit.html"><div class="relative w-[280px] h-[340px] flex-none rounded-sm overflow-hidden bg-gradient-to-br from-[#1f1a10] to-[#8a6512]"><img src="images/practice/legal-audit.jpg" alt="" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()"><div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent hidden sm:block"></div><div class="absolute inset-0 hidden sm:flex flex-col justify-end p-5"><span class="text-white text-xl font-serif tile-title">Legal Audit</span><span class="arrow bg-white/20 text-white mt-3">&rarr;</span></div></div><p class="tile-caption sm:hidden m-0 mt-3 flex items-center justify-between gap-3"><span class="tile-title font-serif text-ink">Legal Audit</span><span class="arrow bg-panel border border-line text-ink">&rarr;</span></p></a>
+      <a class="tile practice-extra" href="practice/labour-employment.html"><div class="relative w-[280px] h-[340px] flex-none rounded-sm overflow-hidden bg-gradient-to-br from-[#b48a14] to-[#3a2e12]"><img src="images/practice/labour-employment.jpg" alt="" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()"><div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent hidden sm:block"></div><div class="absolute inset-0 hidden sm:flex flex-col justify-end p-5"><span class="text-white text-xl font-serif tile-title">Labour &amp; Employment</span><span class="arrow bg-white/20 text-white mt-3">&rarr;</span></div></div><p class="tile-caption sm:hidden m-0 mt-3 flex items-center justify-between gap-3"><span class="tile-title font-serif text-ink">Labour &amp; Employment</span><span class="arrow bg-panel border border-line text-ink">&rarr;</span></p></a>
+      <a class="tile practice-extra" href="practice/pro-bono.html"><div class="relative w-[280px] h-[340px] flex-none rounded-sm overflow-hidden bg-gradient-to-br from-[#e3c25a] to-[#8a6512]"><img src="images/practice/pro-bono.jpg" alt="" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()"><div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent hidden sm:block"></div><div class="absolute inset-0 hidden sm:flex flex-col justify-end p-5"><span class="text-white text-xl font-serif tile-title">Pro Bono</span><span class="arrow bg-white/20 text-white mt-3">&rarr;</span></div></div><p class="tile-caption sm:hidden m-0 mt-3 flex items-center justify-between gap-3"><span class="tile-title font-serif text-ink">Pro Bono</span><span class="arrow bg-panel border border-line text-ink">&rarr;</span></p></a>
+    </div>
+      <button type="button" id="areasNext" class="areas-nav-btn areas-nav-next" aria-label="Scroll practice areas right">&rarr;</button>
+    </div>
+    <div class="sm:hidden mt-6 text-center">
+      <button type="button" id="areasShowMore" class="inline-flex items-center gap-2 text-[.85rem] font-semibold text-brass border border-line rounded-full px-5 py-2.5 hover:bg-panel">Show more <span class="text-[.7rem]">&darr;</span></button>
+    </div>
+  </section>
+
+  <!-- OFFICE LOCATIONS -->
+  <section id="offices" class="max-w-[1200px] mx-auto px-6 py-20 border-t-2 border-gold">
+    <p class="text-[.85rem] tracking-wide text-brass font-semibold mb-2">Where we are</p>
+    <h2 class="text-3xl mb-10">Find us.</h2>
+    <div class="reveal grid md:grid-cols-2 gap-6 max-w-[720px]">
+      <div class="rounded-sm border border-line overflow-hidden md:col-span-2">
+        <div class="h-36 bg-gradient-to-br from-[#3a2e12] to-[#8a6512] flex items-end p-5">
+          <span class="text-white font-serif text-2xl">Jos &mdash; Plateau State</span>
+        </div>
+        <div class="p-6 grid gap-3 text-[.95rem]">
+          <p class="text-muted">No. 9, St Patricks Avenue, St Piran's Street<br>Jos, Plateau State, Nigeria</p>
+          <p><span class="text-brass font-semibold">Phone:</span> <a href="tel:+2348063710358" class="hover:text-brass">0806 371 0358</a> &middot; <a href="tel:+2348029454213" class="hover:text-brass">0802 945 4213</a></p>
+          <p><span class="text-brass font-semibold">Hours:</span> Mon&ndash;Fri, 9am&ndash;5pm</p>
+          <a href="https://maps.app.goo.gl/1zs78oXeJkP6MfQ48?g_st=ac" target="_blank" rel="noopener" class="text-gold text-sm font-semibold inline-flex items-center gap-1">Get directions &#8599;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact-form" class="bg-panel border-y border-line py-20">
+    <div class="reveal max-w-[720px] mx-auto px-6">
+      <p class="text-[.85rem] tracking-wide text-brass font-semibold mb-2 text-center">Get in touch</p>
+      <h2 class="text-3xl mb-2 text-center">Tell us about your matter.</h2>
+      <p class="text-muted text-center mb-10">Send us a message and a member of our team will get back to you within one business day.</p>
+      <form id="contactForm" class="grid gap-6 bg-white border border-line rounded-sm p-8" novalidate>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <label class="text-[.85rem] font-medium">Full name
+            <input required name="name" class="fld mt-1" placeholder="Your name">
+            <span class="err hidden text-[.75rem] text-[#b5502e] mt-1 block">Please enter your name.</span>
+          </label>
+          <label class="text-[.85rem] font-medium">Phone number
+            <input required name="phone" type="tel" pattern="[0-9+()\-\s]{7,20}" class="fld mt-1" placeholder="+234 000 000 0000">
+            <span class="err hidden text-[.75rem] text-[#b5502e] mt-1 block">Enter a valid phone number.</span>
+          </label>
+        </div>
+        <label class="text-[.85rem] font-medium">Email address
+          <input required name="email" type="email" class="fld mt-1" placeholder="you@example.com">
+          <span class="err hidden text-[.75rem] text-[#b5502e] mt-1 block">Enter a valid email address.</span>
+        </label>
+        <label class="text-[.85rem] font-medium">Practice area
+          <select name="area" class="fld mt-1 bg-white">
+            <option>Litigation &amp; Dispute Resolution</option>
+            <option>Corporate Finance</option>
+            <option>Banking &amp; Insurance</option>
+            <option>Real Estate</option>
+            <option>Arbitration &amp; Mediation</option>
+            <option>Corporate &amp; Commercial Matters</option>
+            <option>Taxation</option>
+            <option>Charities &amp; NGOs</option>
+            <option>Labour &amp; Employment</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label class="text-[.85rem] font-medium">How can we help?
+          <textarea required name="message" rows="4" class="fld mt-1 resize-none" placeholder="A brief summary of your matter"></textarea>
+          <span class="err hidden text-[.75rem] text-[#b5502e] mt-1 block">Please tell us a little about your matter.</span>
+        </label>
+        <label class="flex items-start gap-3 text-[.8rem] text-muted">
+          <input required type="checkbox" name="consent" class="mt-1">
+          I understand this form does not create a lawyer-client relationship and that information I share is not privileged until a formal engagement is confirmed.
+        </label>
+        <button type="submit" class="bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f] justify-self-start">Send message</button>
+        <p id="formOk" class="hidden text-brass text-sm font-medium">Thanks for contacting us, your email app should now open with your message pre-filled. Just hit send from there.</p>
+        <p id="formErr" class="hidden text-[#b5502e] text-sm font-medium">Please correct the highlighted fields above and try again.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="contact" class="bg-ink text-[#d9d2bf]">
+    <div class="reveal max-w-[1200px] mx-auto px-6 py-16 grid md:grid-cols-[1fr_1.2fr] gap-10 border-b border-[#3a3323]">
+      <div>
+        <h3 class="text-white text-xl font-serif mb-2">Prefer to reach us directly?</h3>
+        <p class="text-[.95rem]">No. 9, St Patricks Avenue, St Piran's Street, Jos, Plateau State<br>0806 371 0358 &middot; 0802 945 4213</p>
+        <p class="text-[.85rem] mt-2 text-[#9d957f]">Mon&ndash;Fri, 9am&ndash;5pm</p>
+      </div>
+      <form id="nl" class="grid gap-5">
+        <h3 class="text-white text-xl font-serif">Subscribe to our newsletter.</h3>
+        <div class="grid grid-cols-2 gap-5">
+          <label class="text-[.8rem]">First name<input required class="w-full bg-transparent border-b border-[#4a4230] py-2 mt-1 focus:outline-none focus:border-gold"></label>
+          <label class="text-[.8rem]">Last name<input required class="w-full bg-transparent border-b border-[#4a4230] py-2 mt-1 focus:outline-none focus:border-gold"></label>
+        </div>
+        <div class="flex items-end gap-3">
+          <label class="text-[.8rem] flex-1">Email<input required type="email" class="w-full bg-transparent border-b border-[#4a4230] py-2 mt-1 focus:outline-none focus:border-gold"></label>
+          <button class="arrow bg-gold text-white flex-none" type="submit">&rarr;</button>
+        </div>
+        <p id="ok" class="hidden text-gold text-sm">Thanks! You're subscribed.</p>
+      </form>
+    </div>
+    <div class="max-w-[1200px] mx-auto px-6 py-10 grid sm:grid-cols-3 gap-8 text-[.9rem]">
+      <div><h4 class="text-white font-semibold mb-3">Firm</h4><ul class="space-y-2"><li><a href="#about">About Us</a></li><li><a href="#attorneys">Our Lawyers</a></li><li><a href="#areas">Practice Areas</a></li><li><a href="#offices">Offices</a></li></ul></div>
+      <div><h4 class="text-white font-semibold mb-3">Legal</h4><ul class="space-y-2"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li><li><a href="#">Disclaimer</a></li></ul></div>
+      <div><h4 class="text-white font-semibold mb-3">Connect</h4><div class="flex gap-2.5">
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.83v1.98h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8.5z"/></svg></a>
+        <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X (Twitter)" class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M18.9 2h3.1l-7.6 8.7L23.3 22h-6.9l-5.4-6.6L4.4 22H1.3l8.1-9.3L1 2h7.1l4.9 6.1L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      </div></div>
+    </div>
+    <div class="max-w-[1200px] mx-auto px-6 py-6 border-t border-[#3a3323] flex flex-wrap justify-between gap-3 text-[.8rem] text-[#9d957f]">
+      <span>&copy; 2019&ndash;<span id="y"></span> G. Omachi &amp; Co. (Barristers and Solicitors). All rights reserved.</span>
+      <span class="max-w-[52ch]">Nothing on this website is legal advice. Contacting us does not create a lawyer-client relationship.</span>
+    </div>
+  </section>
+</main>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+var t=document.querySelector('.marq .tr .repeat');t.parentNode.innerHTML+=t.parentNode.innerHTML;
+var siteHeader=document.getElementById('siteHeader');
+function onHeaderScroll(){siteHeader.classList.toggle('scrolled', window.scrollY > 80);}
+window.addEventListener('scroll', onHeaderScroll, {passive:true});
+onHeaderScroll();
+var mb=document.getElementById('menuBtn'),m=document.getElementById('menu'),mo=document.getElementById('menuOverlay'),mc=document.getElementById('menuClose');
+function setMenu(o){m.classList.toggle('open',o);mo.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''}
+mb.onclick=function(){setMenu(!m.classList.contains('open'))};
+mc.onclick=function(){setMenu(false)};
+mo.onclick=function(){setMenu(false)};
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+document.getElementById('nl').onsubmit=function(e){e.preventDefault();this.reset();document.getElementById('ok').classList.remove('hidden')};
+
+// Desktop "Explore" popover menu: position under its button, rotate chevron
+var nd=document.querySelector('.navdrop'),ndBtn=document.querySelector('.navdrop-btn'),ndPanel=document.getElementById('exploreMenu');
+ndPanel.addEventListener('toggle',function(e){
+  var open=e.newState==='open';
+  nd.classList.toggle('open',open);
+  ndBtn.setAttribute('aria-expanded',open);
+  if(open){
+    var r=ndBtn.getBoundingClientRect();
+    ndPanel.style.top=(r.bottom+8)+'px';
+    var panelW=Math.min(460,window.innerWidth-32);
+    ndPanel.style.left=Math.max(8,Math.min(r.left-10,window.innerWidth-panelW-16))+'px';
+  }
+});
+
+// Stat counters animate up once when scrolled into view
+var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var statEls=document.querySelectorAll('.stat-num');
+if(statEls.length){
+  if(reduceMotion){
+    statEls.forEach(function(el){el.textContent=el.dataset.count+(el.dataset.suffix||'')});
+  }else{
+    var statObserver=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(!entry.isIntersecting)return;
+        var el=entry.target,target=parseInt(el.dataset.count,10),suffix=el.dataset.suffix||'',start=null,dur=900;
+        function step(ts){
+          if(!start)start=ts;
+          var p=Math.min((ts-start)/dur,1);
+          var eased=1-Math.pow(1-p,3);
+          el.textContent=Math.round(eased*target)+(p>=1?suffix:'');
+          if(p<1)requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        statObserver.unobserve(el);
+      });
+    },{threshold:.6});
+    statEls.forEach(function(el){statObserver.observe(el)});
+  }
+}
+
+// Lawyer grid: show first two on mobile, reveal the rest on click
+var teamBtn=document.getElementById('teamShowMore'),teamGrid=document.getElementById('teamGrid');
+if(teamBtn&&teamGrid){
+  teamBtn.addEventListener('click',function(){
+    var expanded=teamGrid.classList.toggle('expanded');
+    teamBtn.firstChild.textContent=expanded?'Show less ':'Show more ';
+    teamBtn.querySelector('span').textContent=expanded?String.fromCharCode(8593):String.fromCharCode(8595);
+  });
+}
+
+// Practice areas: show a few on mobile, reveal the rest on click
+var areasBtn=document.getElementById('areasShowMore'),areasGrid=document.getElementById('areasGrid');
+if(areasBtn&&areasGrid){
+  areasBtn.addEventListener('click',function(){
+    var expanded=areasGrid.classList.toggle('expanded');
+    areasBtn.firstChild.textContent=expanded?'Show less ':'Show more ';
+    areasBtn.querySelector('span').textContent=expanded?String.fromCharCode(8593):String.fromCharCode(8595);
+  });
+}
+
+// Practice areas: prev/next scroll buttons for the desktop carousel.
+// Right arrow only, until the row has actually scrolled — then both edges
+// show or hide based on how much room is left to scroll in each direction.
+var areasPrev=document.getElementById('areasPrev'),areasNext=document.getElementById('areasNext');
+if(areasPrev&&areasNext&&areasGrid){
+  var scrollAmt=function(){return Math.min(600, areasGrid.clientWidth*0.8)};
+  areasPrev.addEventListener('click',function(){areasGrid.scrollBy({left:-scrollAmt(),behavior:'smooth'})});
+  areasNext.addEventListener('click',function(){areasGrid.scrollBy({left:scrollAmt(),behavior:'smooth'})});
+
+  var updateAreasNav=function(){
+    var maxScroll=areasGrid.scrollWidth-areasGrid.clientWidth-1;
+    areasPrev.classList.toggle('is-hidden', areasGrid.scrollLeft<=0);
+    areasNext.classList.toggle('is-hidden', maxScroll<=0 || areasGrid.scrollLeft>=maxScroll);
+  };
+  areasGrid.addEventListener('scroll', updateAreasNav, {passive:true});
+  window.addEventListener('resize', updateAreasNav);
+  updateAreasNav();
+}
+
+// Reveal each section's content only once the user scrolls to it (not on page load)
+var revealEls=document.querySelectorAll('.reveal, .reveal-stagger');
+if(revealEls.length){
+  if(reduceMotion){
+    revealEls.forEach(function(el){el.classList.add('in-view')});
+  }else{
+    var revealObserver=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        entry.target.classList.toggle('in-view', entry.isIntersecting);
+      });
+    },{threshold:.15,rootMargin:'0px 0px -8% 0px'});
+    revealEls.forEach(function(el){revealObserver.observe(el)});
+  }
+}
+
+// Contact form validation + mailto handoff
+var cf=document.getElementById('contactForm');
+var CONTACT_EMAIL='gabrosky02@gmail.com'; // TODO: replace with the firm's preferred intake address
+cf.addEventListener('submit',function(e){
+  e.preventDefault();
+  var valid=true;
+  cf.querySelectorAll('[required]').forEach(function(f){
+    var errSpan=f.closest('label')?f.closest('label').querySelector('.err'):null;
+    var ok=f.checkValidity();
+    if(!ok){valid=false;}
+    if(errSpan){errSpan.classList.toggle('hidden',ok);}
+  });
+  document.getElementById('formOk').classList.add('hidden');
+  document.getElementById('formErr').classList.add('hidden');
+  if(valid){
+    var fd=new FormData(cf);
+    var name=(fd.get('name')||'').trim();
+    var phone=(fd.get('phone')||'').trim();
+    var email=(fd.get('email')||'').trim();
+    var area=(fd.get('area')||'').trim();
+    var message=(fd.get('message')||'').trim();
+    var subject='Website enquiry from '+name+' \u2014 '+area;
+    var body=
+      'New enquiry submitted via the G. Omachi & Co website contact form.\n\n'+
+      'Name: '+name+'\n'+
+      'Phone: '+phone+'\n'+
+      'Email: '+email+'\n'+
+      'Practice area: '+area+'\n\n'+
+      'Message:\n'+message+'\n';
+    var mailtoLink='mailto:'+encodeURIComponent(CONTACT_EMAIL)+
+      '?subject='+encodeURIComponent(subject)+
+      '&body='+encodeURIComponent(body);
+    window.location.href=mailtoLink;
+    cf.reset();
+    document.getElementById('formOk').classList.remove('hidden');
+  }else{
+    document.getElementById('formErr').classList.remove('hidden');
+  }
+});
+</script>
+</body>
+</html>
