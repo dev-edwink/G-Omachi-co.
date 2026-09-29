@@ -1,120 +1,423 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Family Law | G. Omachi &amp; Co</title>
-<link rel="stylesheet" href="../output.css">
-<link rel="stylesheet" href="../css/custom.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#9878;&#65039;</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-.pg-hero{position:relative}
-.pg-hero-title{position:absolute;left:24px;bottom:24px;margin:0}
-@media(max-width:639px){
-.pg-hero .pg-hero-img{height:220px}
-.pg-hero .pg-hero-scrim{display:none}
-.pg-hero .pg-hero-title{position:static;color:inherit;margin-top:20px;font-size:1.85rem;line-height:1.15;max-width:none}
-}
-</style>
-</head>
-<body class="font-sans text-ink text-[17px] leading-relaxed">
-
-<header id="siteHeader" class="scrolled fixed top-0 inset-x-0 z-20 border-b border-transparent">
-  <div class="max-w-[1200px] mx-auto px-6 h-[76px] flex items-center justify-between">
-    <a href="../index.html" class="brand font-serif flex items-center gap-2.5">G. Omachi <span class="text-brass amp">&amp;</span> Co</a>
-    <nav class="hidden nav:flex items-center gap-8 text-[.95rem] font-medium text-muted">
-      <a href="../about.html">About Us</a>
-      <a href="../index.html#areas">Practice Areas</a>
-      <a href="../index.html#attorneys">Our Lawyers</a>
-      <a href="../index.html#offices">Offices</a>
-    </nav>
-    <div class="flex items-center gap-3">
-      <a href="../index.html#contact-form" class="hidden nav:inline-flex btn bg-gold text-white font-semibold text-[.9rem] px-6 py-3 rounded-full hover:bg-[#b8921f]">Book a consultation</a>
-      <button id="menuBtn" class="nav:hidden w-11 h-11 rounded-full border border-line grid place-content-center" aria-label="Open menu" aria-expanded="false">
-        <span class="block w-5 h-0.5 bg-ink mb-1"></span><span class="block w-5 h-0.5 bg-ink mb-1"></span><span class="block w-5 h-0.5 bg-ink"></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<div id="menuOverlay" class="nav:hidden fixed inset-0 bg-ink/50 z-30"></div>
-<div id="menu" class="nav:hidden fixed inset-y-0 right-0 z-40 w-[82vw] max-w-[340px] min-h-screen bg-white flex flex-col border-l-2 border-gold">
-  <div class="flex items-center justify-between px-6 h-[76px] border-b border-line flex-none">
-    <span class="text-[.7rem] tracking-[.15em] uppercase text-brass font-semibold">Menu</span>
-    <button id="menuClose" class="w-11 h-11 rounded-full border border-line grid place-items-center flex-none hover:bg-panel hover:border-brass transition-colors" aria-label="Close menu">&times;</button>
-  </div>
-  <ul class="flex flex-col px-6 pt-6 text-[1.35rem] font-serif flex-1 overflow-y-auto">
-    <li><a href="../about.html" class="py-4 border-b border-line flex items-center justify-between"><span>About Us</span><span class="text-gold">&rarr;</span></a></li>
-    <li><a href="../index.html#areas" class="py-4 border-b border-line flex items-center justify-between"><span>Practice Areas</span><span class="text-gold">&rarr;</span></a></li>
-    <li><a href="../index.html#attorneys" class="py-4 border-b border-line flex items-center justify-between"><span>Our Lawyers</span><span class="text-gold">&rarr;</span></a></li>
-    <li><a href="../index.html#offices" class="py-4 border-b border-line flex items-center justify-between"><span>Offices</span><span class="text-gold">&rarr;</span></a></li>
-  </ul>
-  <div class="p-6 border-t border-line flex-none grid gap-4">
-    <a href="../index.html#contact-form" class="btn block text-center bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f]">Book a consultation</a>
-  </div>
-</div>
-
-<main>
-  <section class="reveal pt-[120px] pb-16 px-6 max-w-[880px] mx-auto">
-    <a href="../about.html" class="back-home mb-8 inline-block"><span aria-hidden="true">&larr;</span> Back to About</a>
-    <div class="pg-hero mb-8">
-      <div class="pg-hero-img relative overflow-hidden w-full h-[160px] sm:h-[200px] rounded-sm bg-gradient-to-br from-[#1f1a10] to-[#5f5847]">
-        <img src="../images/practice/family-law.jpg" alt="Family Law" class="ph-img absolute inset-0 w-full h-full object-cover" loading="eager" onload="this.classList.add('show')" onerror="this.remove()">
-        <div class="pg-hero-scrim absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Family Law | G. Omachi &amp; Co</title>
+    <link rel="stylesheet" href="../output.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>&#9878;&#65039;</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-sans text-ink text-[17px] leading-relaxed">
+    <header
+      id="siteHeader"
+      class="scrolled fixed top-0 inset-x-0 z-20 border-b border-transparent"
+    >
+      <div
+        class="max-w-[1200px] mx-auto px-6 h-[76px] flex items-center justify-between"
+      >
+        <a
+          href="../index.html"
+          class="brand font-serif flex items-center gap-2.5"
+          >G. Omachi <span class="text-brass amp">&amp;</span> Co</a
+        >
+        <nav
+          class="hidden nav:flex items-center gap-8 text-[.95rem] font-medium text-muted"
+        >
+          <a href="../about.html">About Us</a>
+          <a href="../index.html#areas">Practice Areas</a>
+          <a href="../index.html#attorneys">Our Lawyers</a>
+          <a href="../index.html#offices">Offices</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a
+            href="../index.html#contact-form"
+            class="hidden nav:inline-flex btn bg-gold text-white font-semibold text-[.9rem] px-6 py-3 rounded-full hover:bg-[#b8921f]"
+            >Book a consultation</a
+          >
+          <button
+            id="menuBtn"
+            class="nav:hidden w-11 h-11 rounded-full border border-line grid place-content-center"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span class="block w-5 h-0.5 bg-ink mb-1"></span
+            ><span class="block w-5 h-0.5 bg-ink mb-1"></span
+            ><span class="block w-5 h-0.5 bg-ink"></span>
+          </button>
+        </div>
       </div>
-      <h1 class="pg-hero-title text-white text-3xl sm:text-4xl max-w-[22ch]">Family Law</h1>
-    </div>
-    <p class="text-muted text-lg max-w-[68ch] mb-6">Sensitive problems require clear advice and a human approach.</p>
-    <p class="text-[1.05rem] max-w-[75ch] mb-10">Confidential, practical advice that recognises the emotional, financial and family consequences of proceedings.</p>
-    <ul class="grid sm:grid-cols-2 gap-2 text-[.92rem] text-muted mb-8"><li class="flex gap-3"><span class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"></span><span>Divorce and matrimonial proceedings</span></li><li class="flex gap-3"><span class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"></span><span>Separation</span></li><li class="flex gap-3"><span class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"></span><span>Child custody and parenting arrangements</span></li><li class="flex gap-3"><span class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"></span><span>Maintenance and financial support</span></li><li class="flex gap-3"><span class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"></span><span>Settlement of matrimonial issues</span></li><li class="flex gap-3"><span class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"></span><span>Family property disputes</span></li><li class="flex gap-3"><span class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"></span><span>Marriage documentation and related applications</span></li><li class="flex gap-3"><span class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"></span><span>Adoption and guardianship matters</span></li><li class="flex gap-3"><span class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"></span><span>Domestic and family-related legal disputes</span></li><li class="flex gap-3"><span class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"></span><span>Negotiation and mediation of family disputes</span></li></ul>
-    <p class="text-muted text-[.95rem] max-w-[75ch] mb-10 pt-6 border-t border-line">Where reconciliation or negotiated settlement is appropriate, we encourage it. Where litigation becomes necessary, we advance your interests firmly and professionally. Our mediation and conciliation experience offers another route for suitable disputes.</p>
-    <div class="bg-panel border border-line rounded-sm p-8 flex flex-wrap items-center justify-between gap-6 mb-14">
-      <div><h3 class="text-xl mb-1">Have a matter in this area?</h3><p class="text-muted text-sm max-w-[46ch]">Tell us what you need and we&rsquo;ll route it to the right lawyer.</p></div>
-      <a href="../index.html#contact-form" class="btn bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f] flex-none">Book a consultation</a>
-    </div>
-    <div class="pt-8 border-t border-line">
-      <p class="text-[.85rem] text-muted mb-3 font-semibold">Other practice areas</p>
-      <div class="flex flex-wrap gap-2"><a href="corporate-regulatory.html" class="text-[.85rem] px-3 py-1.5 rounded-full border border-line hover:border-brass hover:text-brass transition-colors">Corporate &amp; Regulatory</a><a href="commercial-contracts.html" class="text-[.85rem] px-3 py-1.5 rounded-full border border-line hover:border-brass hover:text-brass transition-colors">Commercial Contracts &amp; Disputes</a><a href="immigration-law.html" class="text-[.85rem] px-3 py-1.5 rounded-full border border-line hover:border-brass hover:text-brass transition-colors">Immigration Law</a><a href="dispute-resolution.html" class="text-[.85rem] px-3 py-1.5 rounded-full border border-line hover:border-brass hover:text-brass transition-colors">Dispute Resolution &amp; Litigation</a></div>
-    </div>
-  </section>
-</main>
+    </header>
 
-<footer class="bg-ink text-[#d9d2bf]">
-  <div class="max-w-[1200px] mx-auto px-6 py-14 grid sm:grid-cols-3 gap-8 text-[.9rem]">
-    <div>
-      <h3 class="text-white text-xl font-serif mb-2">G. Omachi &amp; Co</h3>
-      <p>No. 9, St Patricks Avenue, St Piran&rsquo;s Street, Jos, Plateau State</p>
+    <div id="menuOverlay" class="nav:hidden fixed inset-0 bg-ink/50 z-30"></div>
+    <div
+      id="menu"
+      class="nav:hidden fixed inset-y-0 right-0 z-40 w-[82vw] max-w-[340px] min-h-screen bg-white flex flex-col border-l-2 border-gold"
+    >
+      <div
+        class="flex items-center justify-between px-6 h-[76px] border-b border-line flex-none"
+      >
+        <span
+          class="text-[.7rem] tracking-[.15em] uppercase text-brass font-semibold"
+          >Menu</span
+        >
+        <button
+          id="menuClose"
+          class="w-11 h-11 rounded-full border border-line grid place-items-center flex-none hover:bg-panel hover:border-brass transition-colors"
+          aria-label="Close menu"
+        >
+          &times;
+        </button>
+      </div>
+      <ul
+        class="flex flex-col px-6 pt-6 text-[1.35rem] font-serif flex-1 overflow-y-auto"
+      >
+        <li>
+          <a
+            href="../about.html"
+            class="py-4 border-b border-line flex items-center justify-between"
+            ><span>About Us</span><span class="text-gold">&rarr;</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="../index.html#areas"
+            class="py-4 border-b border-line flex items-center justify-between"
+            ><span>Practice Areas</span><span class="text-gold">&rarr;</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="../index.html#attorneys"
+            class="py-4 border-b border-line flex items-center justify-between"
+            ><span>Our Lawyers</span><span class="text-gold">&rarr;</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="../index.html#offices"
+            class="py-4 border-b border-line flex items-center justify-between"
+            ><span>Offices</span><span class="text-gold">&rarr;</span></a
+          >
+        </li>
+      </ul>
+      <div class="p-6 border-t border-line flex-none grid gap-4">
+        <a
+          href="../index.html#contact-form"
+          class="btn block text-center bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f]"
+          >Book a consultation</a
+        >
+      </div>
     </div>
-    <div><h4 class="text-white font-semibold mb-3">Firm</h4><ul class="space-y-2"><li><a href="../about.html">About Us</a></li><li><a href="../index.html#attorneys">Our Lawyers</a></li><li><a href="../index.html#areas">Practice Areas</a></li><li><a href="../index.html#offices">Offices</a></li></ul></div>
-    <div><h4 class="text-white font-semibold mb-3">Connect</h4><div class="flex gap-2.5">
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.83v1.98h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8.5z"/></svg></a>
-      <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X (Twitter)" class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M18.9 2h3.1l-7.6 8.7L23.3 22h-6.9l-5.4-6.6L4.4 22H1.3l8.1-9.3L1 2h7.1l4.9 6.1L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg></a>
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
-    </div></div>
-  </div>
-  <div class="max-w-[1200px] mx-auto px-6 py-6 border-t border-[#3a3323] flex flex-wrap justify-between gap-3 text-[.8rem] text-[#9d957f]">
-    <span>&copy; 2019&ndash;<span class="js-year"></span> G. Omachi &amp; Co. (Barristers and Solicitors). All rights reserved.</span>
-    <span class="max-w-[52ch]">Nothing on this website is legal advice. Contacting us does not create a lawyer-client relationship.</span>
-  </div>
-</footer>
 
-<script>
-document.querySelectorAll('.js-year').forEach(function(e){e.textContent=new Date().getFullYear()});
-var mb=document.getElementById('menuBtn'),m=document.getElementById('menu'),mo=document.getElementById('menuOverlay'),mc=document.getElementById('menuClose');
-function setMenu(o){m.classList.toggle('open',o);mo.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''}
-mb.onclick=function(){setMenu(!m.classList.contains('open'))};
-mc.onclick=function(){setMenu(false)};
-mo.onclick=function(){setMenu(false)};
-m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
-var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var revealEls=document.querySelectorAll('.reveal');
-if(reduceMotion){revealEls.forEach(function(el){el.classList.add('in-view')});}
-else{
-  var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){e.target.classList.toggle('in-view',e.isIntersecting)})},{threshold:.1,rootMargin:'0px 0px -8% 0px'});
-  revealEls.forEach(function(el){ro.observe(el)});
-}
-</script>
-</body>
+    <main>
+      <section class="reveal pt-[120px] pb-16 px-6 max-w-[880px] mx-auto">
+        <a href="../about.html" class="back-home mb-8 inline-block"
+          ><span aria-hidden="true">&larr;</span> Back to About</a
+        >
+        <div class="pg-hero mb-8">
+          <div
+            class="pg-hero-img relative overflow-hidden w-full h-[160px] sm:h-[200px] rounded-sm bg-gradient-to-br from-[#1f1a10] to-[#5f5847]"
+          >
+            <img
+              src="../images/practice/family-law.jpg"
+              alt="Family Law"
+              class="ph-img absolute inset-0 w-full h-full object-cover"
+              loading="eager"
+              onload="this.classList.add('show')"
+              onerror="this.remove()"
+            />
+            <div
+              class="pg-hero-scrim absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"
+            ></div>
+          </div>
+          <h1
+            class="pg-hero-title text-white text-3xl sm:text-4xl max-w-[22ch]"
+          >
+            Family Law
+          </h1>
+        </div>
+        <p class="text-muted text-lg max-w-[68ch] mb-6">
+          Sensitive problems require clear advice and a human approach.
+        </p>
+        <p class="text-[1.05rem] max-w-[75ch] mb-10">
+          Confidential, practical advice that recognises the emotional,
+          financial and family consequences of proceedings.
+        </p>
+        <ul class="grid sm:grid-cols-2 gap-2 text-[.92rem] text-muted mb-8">
+          <li class="flex gap-3">
+            <span
+              class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"
+            ></span
+            ><span>Divorce and matrimonial proceedings</span>
+          </li>
+          <li class="flex gap-3">
+            <span
+              class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"
+            ></span
+            ><span>Separation</span>
+          </li>
+          <li class="flex gap-3">
+            <span
+              class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"
+            ></span
+            ><span>Child custody and parenting arrangements</span>
+          </li>
+          <li class="flex gap-3">
+            <span
+              class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"
+            ></span
+            ><span>Maintenance and financial support</span>
+          </li>
+          <li class="flex gap-3">
+            <span
+              class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"
+            ></span
+            ><span>Settlement of matrimonial issues</span>
+          </li>
+          <li class="flex gap-3">
+            <span
+              class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"
+            ></span
+            ><span>Family property disputes</span>
+          </li>
+          <li class="flex gap-3">
+            <span
+              class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"
+            ></span
+            ><span>Marriage documentation and related applications</span>
+          </li>
+          <li class="flex gap-3">
+            <span
+              class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"
+            ></span
+            ><span>Adoption and guardianship matters</span>
+          </li>
+          <li class="flex gap-3">
+            <span
+              class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"
+            ></span
+            ><span>Domestic and family-related legal disputes</span>
+          </li>
+          <li class="flex gap-3">
+            <span
+              class="flex-none mt-[.55rem] w-2.5 h-2.5 rounded-full bg-brass"
+            ></span
+            ><span>Negotiation and mediation of family disputes</span>
+          </li>
+        </ul>
+        <p
+          class="text-muted text-[.95rem] max-w-[75ch] mb-10 pt-6 border-t border-line"
+        >
+          Where reconciliation or negotiated settlement is appropriate, we
+          encourage it. Where litigation becomes necessary, we advance your
+          interests firmly and professionally. Our mediation and conciliation
+          experience offers another route for suitable disputes.
+        </p>
+        <div
+          class="bg-panel border border-line rounded-sm p-8 flex flex-wrap items-center justify-between gap-6 mb-14"
+        >
+          <div>
+            <h3 class="text-xl mb-1">Have a matter in this area?</h3>
+            <p class="text-muted text-sm max-w-[46ch]">
+              Tell us what you need and we&rsquo;ll route it to the right
+              lawyer.
+            </p>
+          </div>
+          <a
+            href="../index.html#contact-form"
+            class="btn bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f] flex-none"
+            >Book a consultation</a
+          >
+        </div>
+        <div class="pt-8 border-t border-line">
+          <p class="text-[.85rem] text-muted mb-3 font-semibold">
+            Other practice areas
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <a
+              href="corporate-regulatory.html"
+              class="text-[.85rem] px-3 py-1.5 rounded-full border border-line hover:border-brass hover:text-brass transition-colors"
+              >Corporate &amp; Regulatory</a
+            ><a
+              href="commercial-contracts.html"
+              class="text-[.85rem] px-3 py-1.5 rounded-full border border-line hover:border-brass hover:text-brass transition-colors"
+              >Commercial Contracts &amp; Disputes</a
+            ><a
+              href="immigration-law.html"
+              class="text-[.85rem] px-3 py-1.5 rounded-full border border-line hover:border-brass hover:text-brass transition-colors"
+              >Immigration Law</a
+            ><a
+              href="dispute-resolution.html"
+              class="text-[.85rem] px-3 py-1.5 rounded-full border border-line hover:border-brass hover:text-brass transition-colors"
+              >Dispute Resolution &amp; Litigation</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink text-[#d9d2bf]">
+      <div
+        class="max-w-[1200px] mx-auto px-6 py-14 grid sm:grid-cols-3 gap-8 text-[.9rem]"
+      >
+        <div>
+          <h3 class="text-white text-xl font-serif mb-2">G. Omachi &amp; Co</h3>
+          <p>
+            No. 9, St Patricks Avenue, St Piran&rsquo;s Street, Jos, Plateau
+            State
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">Firm</h4>
+          <ul class="space-y-2">
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../index.html#attorneys">Our Lawyers</a></li>
+            <li><a href="../index.html#areas">Practice Areas</a></li>
+            <li><a href="../index.html#offices">Offices</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-3">Connect</h4>
+          <div class="flex gap-2.5">
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"
+              ><svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.83v1.98h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8.5z"
+                /></svg
+            ></a>
+            <a
+              href="https://x.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="X (Twitter)"
+              class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"
+              ><svg
+                viewBox="0 0 24 24"
+                width="16"
+                height="16"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M18.9 2h3.1l-7.6 8.7L23.3 22h-6.9l-5.4-6.6L4.4 22H1.3l8.1-9.3L1 2h7.1l4.9 6.1L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"
+                /></svg
+            ></a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"
+              ><svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle
+                  cx="17.3"
+                  cy="6.7"
+                  r="1.1"
+                  fill="currentColor"
+                  stroke="none"
+                /></svg
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-[1200px] mx-auto px-6 py-6 border-t border-[#3a3323] flex flex-wrap justify-between gap-3 text-[.8rem] text-[#9d957f]"
+      >
+        <span
+          >&copy; 2019&ndash;<span class="js-year"></span> G. Omachi &amp; Co.
+          (Barristers and Solicitors). All rights reserved.</span
+        >
+        <span class="max-w-[52ch]"
+          >Nothing on this website is legal advice. Contacting us does not
+          create a lawyer-client relationship.</span
+        >
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll(".js-year").forEach(function (e) {
+        e.textContent = new Date().getFullYear();
+      });
+      var mb = document.getElementById("menuBtn"),
+        m = document.getElementById("menu"),
+        mo = document.getElementById("menuOverlay"),
+        mc = document.getElementById("menuClose");
+      function setMenu(o) {
+        m.classList.toggle("open", o);
+        mo.classList.toggle("open", o);
+        mb.setAttribute("aria-expanded", o);
+        document.body.style.overflow = o ? "hidden" : "";
+      }
+      mb.onclick = function () {
+        setMenu(!m.classList.contains("open"));
+      };
+      mc.onclick = function () {
+        setMenu(false);
+      };
+      mo.onclick = function () {
+        setMenu(false);
+      };
+      m.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () {
+          setMenu(false);
+        });
+      });
+      var reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+      var revealEls = document.querySelectorAll(".reveal");
+      if (reduceMotion) {
+        revealEls.forEach(function (el) {
+          el.classList.add("in-view");
+        });
+      } else {
+        var ro = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              e.target.classList.toggle("in-view", e.isIntersecting);
+            });
+          },
+          { threshold: 0.1, rootMargin: "0px 0px -8% 0px" },
+        );
+        revealEls.forEach(function (el) {
+          ro.observe(el);
+        });
+      }
+    </script>
+  </body>
 </html>

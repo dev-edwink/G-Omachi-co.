@@ -1,655 +1,1538 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>G. Omachi &amp; Co | Barristers, Solicitors, Consultants &amp; Mediators</title>
-<link rel="stylesheet" href="output.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/custom.css">
-<style>
-#teamGrid .team-extra{display:none}
-#teamGrid.expanded .team-extra{display:block}
-#teamShowMore.is-expanded .arrow-caret{transform:rotate(180deg)}
-</style>
-<style>
-html{scroll-padding-top:84px;-webkit-text-size-adjust:100%}
-#menu{overscroll-behavior:contain}
-@media(max-width:767px){
-.hero-box.hero-box{min-height:min(100svh,720px)}
-#about,#attorneys,#why,#offices,#contact-form{padding-top:56px;padding-bottom:56px}
-.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.stat-row .stat-num{font-size:2rem}
-#areas .grid{grid-template-columns:1fr;gap:12px}
-#areas .tile{height:112px}
-#areas .tile>div:last-child{flex-direction:row;align-items:flex-end;justify-content:space-between;padding:16px 18px}
-#areas .tile .arrow{margin-top:0}
-#contactForm{padding:20px}
-#contactForm button[type=submit]{width:100%;justify-self:stretch}
-.fld,#nl input{font-size:16px}
-#nl .grid-cols-2{grid-template-columns:1fr}
-#contact li a{display:inline-block;padding:5px 0}
-}
-</style>
-<style>
-@media(min-width:640px) and (max-width:767px){#teamGrid{grid-template-columns:1fr}}
-#about .ab-btns{flex-wrap:nowrap;gap:8px}
-#about .ab-btns a{flex:1 1 0;text-align:center;white-space:nowrap;padding:11px 8px;font-size:.8rem}
-@media(min-width:640px){#about .ab-btns a{flex:0 0 auto;padding:12px 24px;font-size:.95rem}}
-</style>
-<style>
-@media(max-width:639px){
-#about .ab-btns{gap:8px}
-#about .ab-btns a{flex:1 1 auto;display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 14px;font-size:.84rem;line-height:1.1}
-}
-@media(max-width:767px){
-#about .stat-row{gap:0;margin-bottom:28px}
-#about .stat-row>div{padding:2px 10px 2px 12px;border-left:1px solid rgba(0,0,0,.14)}
-#about .stat-row>div:first-child{padding-left:0;border-left:0}
-#about .stat-row .stat-num{font-size:2.25rem;line-height:1;letter-spacing:-.02em;margin-bottom:8px}
-#about .stat-row span{display:block;font-size:.78rem;line-height:1.35}
-}
-</style>
-<style>
-body #exploreMenu{margin:0;inset:auto;position:fixed;width:min(340px,calc(100vw - 32px));padding:14px 22px 10px;background:#fff;color:inherit;border:0;border-top:2px solid #c9a227;border-radius:0 0 3px 3px;box-shadow:0 18px 40px -18px rgba(20,17,10,.35);overflow:visible}
-body #exploreMenu:not(:popover-open){display:none}
-body #exploreMenu .dd-heading{margin:0 0 4px;font-size:.78rem;font-weight:600;letter-spacing:.02em;color:#8a6512}
-body #exploreMenu .dd-areas{list-style:none;margin:0;padding:0;display:block}
-body #exploreMenu .dd-areas li{margin:0;padding:0;border:0}
-body #exploreMenu .dd-areas a{display:flex;align-items:center;gap:0;padding:11px 0;font-family:'Newsreader',Georgia,serif;font-size:1.08rem;line-height:1.3;color:inherit;transition:color .15s,gap .2s}
-body #exploreMenu .dd-areas a::before{content:"";flex:none;width:0;height:2px;background:#c9a227;transition:width .2s}
-body #exploreMenu .dd-areas a:hover,body #exploreMenu .dd-areas a:focus-visible{color:#8a6512;gap:12px}
-body #exploreMenu .dd-areas a:hover::before,body #exploreMenu .dd-areas a:focus-visible::before{width:18px}
-body #exploreMenu .dd-divider{height:1px;margin:6px 0 2px;background:rgba(0,0,0,.1)}
-body #exploreMenu .dd-office{display:flex;align-items:center;justify-content:space-between;padding:12px 0;color:inherit}
-body #exploreMenu .dd-copy{display:flex;flex-direction:column;gap:1px}
-body #exploreMenu .dd-title{font-family:'Newsreader',Georgia,serif;font-size:1.08rem}
-body #exploreMenu .dd-sub{font-size:.8rem;opacity:.65}
-body #exploreMenu .dd-go{color:#c9a227;transition:transform .2s}
-body #exploreMenu .dd-office:hover .dd-go{transform:translateX(4px)}
-@media(prefers-reduced-motion:reduce){body #exploreMenu *{transition:none!important}}
-</style>
-<style>
-body #exploreMenu,body #exploreMenu a,body #exploreMenu .dd-title{color:#1c1710!important}
-body #exploreMenu .dd-heading{color:#8a6512!important}
-body #exploreMenu .dd-sub{color:#5f5847!important;opacity:1}
-body #exploreMenu .dd-go{color:#c9a227!important}
-body #exploreMenu .dd-areas a:hover,body #exploreMenu .dd-areas a:focus-visible,body #exploreMenu .dd-office:hover .dd-title{color:#8a6512!important}
-</style>
-<style>
-#menu{height:100%;height:100dvh;min-height:0}
-#menu>div:last-child{padding-bottom:calc(24px + env(safe-area-inset-bottom,0px))}
-</style>
-<style>
-.office-img.office-img{height:190px}
-@media(min-width:768px){.office-img.office-img{height:220px}}
-</style>
-</head>
-<body class="font-Poppins text-ink text-[17px] leading-relaxed">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>
+      G. Omachi &amp; Co | Barristers, Solicitors, Consultants &amp; Mediators
+    </title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body class="font-Poppins text-ink text-[17px] leading-relaxed">
+    <header
+      id="siteHeader"
+      class="fixed top-0 inset-x-0 z-20 bg-transparent border-b border-transparent transition-colors duration-300"
+    >
+      <div
+        class="max-w-[1200px] mx-auto px-6 h-[76px] flex items-center justify-between"
+      >
+        <a href="#top" class="brand font-serif flex items-center gap-2.5">
+          G. Omachi <span class="text-brass amp">&amp;</span> Co
+        </a>
+        <nav
+          class="hidden nav:flex items-center gap-8 text-[1rem] font-semibold text-muted"
+        >
+          <a href="about.html" class="hover:text-ink">About Us</a>
 
-<header id="siteHeader" class="fixed top-0 inset-x-0 z-20 bg-transparent border-b border-transparent transition-colors duration-300">
-  <div class="max-w-[1200px] mx-auto px-6 h-[76px] flex items-center justify-between">
-    <a href="#top" class="brand font-serif flex items-center gap-2.5">
-      G. Omachi <span class="text-brass amp">&amp;</span> Co
-    </a>
-    <nav class="hidden nav:flex items-center gap-8 text-[1rem] font-semibold text-muted">
-      <a href="about.html" class="hover:text-ink">About Us</a>
-      
-      <div class="navdrop relative">
-        <button type="button" popovertarget="exploreMenu" class="navdrop-btn inline-flex items-center gap-1.5 hover:text-ink" aria-expanded="false">
-          Explore
-          <svg class="w-3 h-3 transition-transform duration-200" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="navdrop relative">
+            <button
+              type="button"
+              popovertarget="exploreMenu"
+              class="navdrop-btn inline-flex items-center gap-1.5 hover:text-ink"
+              aria-expanded="false"
+            >
+              Explore
+              <svg
+                class="w-3 h-3 transition-transform duration-200"
+                viewBox="0 0 12 8"
+                fill="none"
+              >
+                <path
+                  d="M1 1.5L6 6.5L11 1.5"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div id="exploreMenu" popover>
+              <p class="dd-heading">Practice Areas</p>
+              <ul class="dd-areas">
+                <li>
+                  <a href="practice/corporate-regulatory.html"
+                    >Corporate &amp; Regulatory</a
+                  >
+                </li>
+                <li>
+                  <a href="practice/commercial-contracts.html"
+                    >Commercial Contracts &amp; Disputes</a
+                  >
+                </li>
+                <li><a href="practice/family-law.html">Family Law</a></li>
+                <li>
+                  <a href="practice/immigration-law.html">Immigration Law</a>
+                </li>
+                <li>
+                  <a href="practice/dispute-resolution.html"
+                    >Dispute Resolution &amp; Litigation</a
+                  >
+                </li>
+              </ul>
+              <div class="dd-divider"></div>
+              <a href="#offices" class="dd-office"
+                ><span class="dd-copy"
+                  ><span class="dd-title">Offices</span
+                  ><span class="dd-sub">Where to find us</span></span
+                ><span class="dd-go">&rarr;</span></a
+              >
+            </div>
+          </div>
+          <a href="#attorneys" class="hover:text-ink">Our Lawyers</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a
+            href="#contact-form"
+            class="hidden nav:inline-flex btn bg-gold text-white font-semibold text-[.9rem] px-6 py-3 rounded-full hover:bg-[#b8921f]"
+            >Book a consultation</a
+          >
+          <button
+            id="menuBtn"
+            class="nav:hidden w-11 h-11 rounded-full border border-line grid place-content-center"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span class="block w-5 h-0.5 bg-ink mb-1"></span
+            ><span class="block w-5 h-0.5 bg-ink mb-1"></span
+            ><span class="block w-5 h-0.5 bg-ink"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div id="menuOverlay" class="nav:hidden fixed inset-0 bg-ink/50 z-30"></div>
+    <div
+      id="menu"
+      class="nav:hidden fixed inset-y-0 right-0 z-40 w-[82vw] max-w-[340px] min-h-screen bg-white flex flex-col border-l-2 border-gold"
+    >
+      <div
+        class="flex items-center justify-between px-6 h-[76px] border-b border-line flex-none"
+      >
+        <span
+          class="text-[.7rem] tracking-[.15em] uppercase text-brass font-semibold"
+          >Menu</span
+        >
+        <button
+          id="menuClose"
+          class="w-11 h-11 rounded-full border border-line grid place-items-center flex-none hover:bg-panel hover:border-brass transition-colors"
+          aria-label="Close menu"
+        >
+          &times;
         </button>
-        <div id="exploreMenu" popover>
-          <p class="dd-heading">Practice Areas</p>
-          <ul class="dd-areas">
-            <li><a href="practice/corporate-regulatory.html">Corporate &amp; Regulatory</a></li>
-            <li><a href="practice/commercial-contracts.html">Commercial Contracts &amp; Disputes</a></li>
-            <li><a href="practice/family-law.html">Family Law</a></li>
-            <li><a href="practice/immigration-law.html">Immigration Law</a></li>
-            <li><a href="practice/dispute-resolution.html">Dispute Resolution &amp; Litigation</a></li>
-          </ul>
-          <div class="dd-divider"></div>
-          <a href="#offices" class="dd-office"><span class="dd-copy"><span class="dd-title">Offices</span><span class="dd-sub">Where to find us</span></span><span class="dd-go">&rarr;</span></a>
+      </div>
+      <ul
+        class="flex flex-col px-6 pt-6 text-[1.35rem] font-Manrope flex-1 overflow-y-auto"
+      >
+        <li>
+          <a href="about.html" class="py-4 border-b border-line"
+            ><span class="label">About Us</span
+            ><span class="go">&rarr;</span></a
+          >
+        </li>
+        <li>
+          <a href="#attorneys" class="py-4 border-b border-line"
+            ><span class="label">Our Lawyers</span
+            ><span class="go">&rarr;</span></a
+          >
+        </li>
+        <li>
+          <a href="#areas" class="py-4 border-b border-line"
+            ><span class="label">Practice Areas</span
+            ><span class="go">&rarr;</span></a
+          >
+        </li>
+        <li>
+          <a href="#offices" class="py-4 border-b border-line"
+            ><span class="label">Offices</span><span class="go">&rarr;</span></a
+          >
+        </li>
+      </ul>
+      <div class="p-6 border-t border-line flex-none grid gap-4">
+        <a
+          href="#contact-form"
+          class="btn block text-center bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f]"
+          >Book a consultation</a
+        >
+      </div>
+    </div>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="relative overflow-hidden">
+        <div
+          class="hero-box relative min-h-screen max-h-full sm:h-auto sm:max-h-none lg:h-[620px] bg-[radial-gradient(circle_at_20%_0%,#f3dd97,transparent_55%),radial-gradient(circle_at_90%_20%,#e3c25a,transparent_45%),linear-gradient(160deg,#fbf7ec,#e9d9a8_60%,#c9a227)]"
+        >
+          <img
+            src="images/hero.jpg"
+            alt=""
+            class="hero-img object-top absolute inset-0 w-full h-full object-cover"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            onload="this.classList.add('show')"
+            onerror="this.remove()"
+          />
         </div>
-      </div>
-      <a href="#attorneys" class="hover:text-ink">Our Lawyers</a>
-    </nav>
-    <div class="flex items-center gap-3">
-      <a href="#contact-form" class="hidden nav:inline-flex btn bg-gold text-white font-semibold text-[.9rem] px-6 py-3 rounded-full hover:bg-[#b8921f]">Book a consultation</a>
-      <button id="menuBtn" class="nav:hidden w-11 h-11 rounded-full border border-line grid place-content-center" aria-label="Open menu" aria-expanded="false">
-        <span class="block w-5 h-0.5 bg-ink mb-1"></span><span class="block w-5 h-0.5 bg-ink mb-1"></span><span class="block w-5 h-0.5 bg-ink"></span>
-      </button>
-    </div>
-  </div>
-
-</header>
-
-<div id="menuOverlay" class="nav:hidden fixed inset-0 bg-ink/50 z-30"></div>
-<div id="menu" class="nav:hidden fixed inset-y-0 right-0 z-40 w-[82vw] max-w-[340px] min-h-screen bg-white flex flex-col border-l-2 border-gold">
-  <div class="flex items-center justify-between px-6 h-[76px] border-b border-line flex-none">
-    <span class="text-[.7rem] tracking-[.15em] uppercase text-brass font-semibold">Menu</span>
-    <button id="menuClose" class="w-11 h-11 rounded-full border border-line grid place-items-center flex-none hover:bg-panel hover:border-brass transition-colors" aria-label="Close menu">&times;</button>
-  </div>
-  <ul class="flex flex-col px-6 pt-6 text-[1.35rem] font-Manrope flex-1 overflow-y-auto">
-    <li><a href="about.html" class="py-4 border-b border-line"><span class="label">About Us</span><span class="go">&rarr;</span></a></li>
-    <li><a href="#attorneys" class="py-4 border-b border-line"><span class="label">Our Lawyers</span><span class="go">&rarr;</span></a></li>
-    <li><a href="#areas" class="py-4 border-b border-line"><span class="label">Practice Areas</span><span class="go">&rarr;</span></a></li>
-    <li><a href="#offices" class="py-4 border-b border-line"><span class="label">Offices</span><span class="go">&rarr;</span></a></li>
-  </ul>
-  <div class="p-6 border-t border-line flex-none grid gap-4">
-  <a href="#contact-form" class="btn block text-center bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f]">Book a consultation</a>
-  </div>
-</div>
-
-<main id="top">
-  <!-- HERO -->
-  <section class="relative overflow-hidden">
-    <div class="hero-box relative min-h-screen max-h-full sm:h-auto sm:max-h-none lg:h-[620px] bg-[radial-gradient(circle_at_20%_0%,#f3dd97,transparent_55%),radial-gradient(circle_at_90%_20%,#e3c25a,transparent_45%),linear-gradient(160deg,#fbf7ec,#e9d9a8_60%,#c9a227)]">
-      <img src="images/hero.jpg" alt="" class="hero-img object-top absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async" onload="this.classList.add('show')" onerror="this.remove()">
-    </div>
-    <div class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/25 to-ink/10"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-ink/45 via-ink/5 to-transparent"></div>
-    <div class="absolute inset-0 max-w-[1200px] mx-auto px-6 flex flex-col justify-end pb-10 sm:pb-16">
-      <div class="hero-copy">
-        <p class="eyebrow text-gold font-semibold tracking-wide text-[.75rem] sm:text-[.85rem] mb-3"> Barristers, solicitors, consultants &amp; mediators</p>
-        <h1 class="text-white text-[clamp(1.8rem,7vw,4rem)] max-w-[18ch] leading-[1.1] sm:leading-[1.05]">Practical legal solutions. Trusted advice.</h1>
-        <p class="text-white/80 max-w-[52ch] mt-4 mb-7 text-[.95rem]">Corporate, commercial and regulatory work, family law and immigration, from our offices in Jos and Abuja. We understand the client, understand the problem and find the most effective legal solution.</p>
-        <div class="pill">
-          <a href="#contact-form" class="bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f]">Book a consultation</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TICKER -->
-  <div class="marq bg-ink py-4" aria-hidden="true">
-    <div class="tr">
-      <span class="repeat font-serif text-xl text-[#f1dea0] flex items-center gap-10">
-        <span>Corporate, Commercial &amp; Regulatory</span><i class="w-2 h-2 bg-gold rotate-45"></i>
-        <span>Family Law</span><i class="w-2 h-2 bg-gold rotate-45"></i>
-        <span>Immigration Law</span><i class="w-2 h-2 bg-gold rotate-45"></i>
-        <span>Mediation &amp; Conciliation</span><i class="w-2 h-2 bg-gold rotate-45"></i>
-        <span>Offices in Jos &amp; Abuja</span><i class="w-2 h-2 bg-gold rotate-45"></i>
-      </span>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <section id="about" class="max-w-[1200px] mx-auto px-6 py-20 border-t-2 border-gold">
-    <div class="reveal grid md:grid-cols-[1fr_1.4fr] gap-10">
-      <div>
-        <p class="text-[.85rem] tracking-wide text-brass font-semibold mb-2">About us</p>
-        <h2 class="text-3xl">Clear, practical, and on your side.</h2>
-      </div>
-      <div>
-        <p class="text-muted text-[0.95rem] mb-4">G. Omachi &amp; Co. is a Nigerian law firm providing practical, responsive and commercially focused legal services to individuals, families, entrepreneurs, companies and organisations. Our approach is simple: understand the client, understand the problem and identify the most effective legal solution.</p>
-        <p class="text-muted text-[0.95rem]  mb-6">We have a long-standing background in advisory work, commercial transactions, regulatory matters, litigation and alternative dispute resolution, and today our practice is centred on: Corporate, Commercial &amp; Regulatory; Family Law; and Immigration Law. Litigation and dispute resolution support those areas whenever court proceedings, negotiation or mediation become necessary.</p>
-        <div class="flex gap-10 mb-8 text-[0.95rem] flex-wrap stat-row">
-          <div><b class="font-serif text-4xl text-brass block stat-num" data-count="15" data-suffix="+">0</b><span class="text-muted text-sm">Years' experience</span></div>
-          <div><b class="font-serif text-4xl text-brass block stat-num" data-count="5" data-suffix="">0</b><span class="text-muted text-sm">Core practice areas</span></div>
-          <div><b class="font-serif text-4xl text-brass block stat-num" data-count="2" data-suffix="">0</b><span class="text-muted text-sm">Offices: Jos and Abuja</span></div>
-        </div>
-        <div class="pill ab-btns flex flex-wrap gap-5"><a href="about.html" class="bg-gold text-white font-bold px-6 py-3 rounded-full hover:bg-[#b8921f]">Read more</a><a href="#areas" class="border border-line text-ink font-bold px-6 py-3 rounded-full hover:border-brass">See our services</a></div>
-      </div>
-    </div>
-    <!-- Values -->
-    <div class="values-grid reveal-stagger grid sm:grid-cols-3 gap-6 mt-14 pt-10 border-t border-line">
-      <div class="values-card">
-        <span class="text-brass text-2xl font-Manrope">Mission</span>
-        <p class="text-muted text-[.9rem] mt-2 clamp-3">Our mission: effective, practical and client-focused legal services, delivered efficiently and at a reasonable cost.</p>
-      </div>
-      <div class="values-card">
-        <span class="text-brass text-2xl font-Manrope">Vision</span>
-        <p class="text-muted text-[.9rem] mt-2 clamp-3">Our vision: to be a trusted modern law firm recognised for integrity, professionalism, responsiveness and excellence in client service.</p>
-      </div>
-      <div class="values-card">
-        <span class="text-brass text-2xl font-Manrope">Approach</span>
-        <p class="text-muted text-[.9rem] mt-2 clamp-3">Our approach: we explore negotiation, mediation and other dispute resolution before litigation, and we treat every client's information with confidentiality.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FIRM ATTORNEYS -->
-  <section id="attorneys" class="max-w-[1200px] mx-auto px-6 py-20 border-t-2 border-gold">
-    <div class="reveal flex flex-wrap justify-between items-end gap-6 mb-6">
-      <div>
-        <p class="text-[.85rem] tracking-wide text-brass font-semibold mb-2">The team</p>
-        <h2 class="text-2xl max-w-full">The people behind your matter.</h2>
-      </div>
-      <p class="text-muted max-w-full text-[0.9rem]">Substantial combined experience across advisory work, transactions, compliance, litigation and dispute resolution.</p>
-    </div>
-    <div id="teamGrid" class="reveal-stagger grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <article class="group">
-        <a href="team/gabriel-omachi.html" class="block">
-          <div class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#3a2e12] to-[#8a6512] relative flex items-center justify-center">
-            <img src="images/team/gabriel-omachi.jpg" alt="Gabriel Omachi" class="ph-img" loading="eager" onload="this.classList.add('show')" onerror="this.remove()">
-            <span class="text-white/90 font-serif text-5xl">GO</span>
-            <div class="absolute inset-0 flex items-end p-5"><span class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm">Principal Partner</span></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/25 to-ink/10"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-ink/45 via-ink/5 to-transparent"
+        ></div>
+        <div
+          class="absolute inset-0 max-w-[1200px] mx-auto px-6 flex flex-col justify-end pb-10 sm:pb-16"
+        >
+          <div class="hero-copy">
+            <p
+              class="eyebrow text-gold font-semibold tracking-wide text-[.75rem] sm:text-[.85rem] mb-3"
+            >
+              Barristers, solicitors, consultants &amp; mediators
+            </p>
+            <h1
+              class="text-white text-[clamp(1.8rem,7vw,4rem)] max-w-[18ch] leading-[1.1] sm:leading-[1.05]"
+            >
+              Practical legal solutions. Trusted advice.
+            </h1>
+            <p class="text-white/80 max-w-[52ch] mt-4 mb-7 text-[.95rem]">
+              Corporate, commercial and regulatory work, family law and
+              immigration, from our offices in Jos and Abuja. We understand the
+              client, understand the problem and find the most effective legal
+              solution.
+            </p>
+            <div class="pill">
+              <a
+                href="#contact-form"
+                class="bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f]"
+                >Book a consultation</a
+              >
+            </div>
           </div>
-        </a>
-        <a href="team/gabriel-omachi.html" class="block"><h3 class="font-serif text-xl mt-4 group-hover:text-brass transition-colors">Gabriel Omachi</h3></a>
-        <p class="text-brass text-[.85rem] font-medium mb-3">LLB, BL, LLM, PhD Researcher, Notary Public</p>
-        <a href="team/gabriel-omachi.html" class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass">View profile</a>
-      </article>
-      <article class="group">
-        <a href="team/aminu-alfa.html" class="block">
-          <div class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#5c4a1a] to-[#c9a227] relative flex items-center justify-center">
-            <img src="images/team/aminu-alfa.jpg" alt="Aminu Alfa" class="ph-img" loading="eager" onload="this.classList.add('show')" onerror="this.remove()">
-            <span class="text-white/90 font-serif text-5xl">AA</span>
-            <div class="absolute inset-0 flex items-end p-5"><span class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm">Partner</span></div>
+        </div>
+      </section>
+
+      <!-- TICKER -->
+      <div class="marq bg-ink py-4" aria-hidden="true">
+        <div class="tr">
+          <span
+            class="repeat font-serif text-xl text-[#f1dea0] flex items-center gap-10"
+          >
+            <span>Corporate, Commercial &amp; Regulatory</span
+            ><i class="w-2 h-2 bg-gold rotate-45"></i> <span>Family Law</span
+            ><i class="w-2 h-2 bg-gold rotate-45"></i>
+            <span>Immigration Law</span
+            ><i class="w-2 h-2 bg-gold rotate-45"></i>
+            <span>Mediation &amp; Conciliation</span
+            ><i class="w-2 h-2 bg-gold rotate-45"></i>
+            <span>Offices in Jos &amp; Abuja</span
+            ><i class="w-2 h-2 bg-gold rotate-45"></i>
+          </span>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <section
+        id="about"
+        class="max-w-[1200px] mx-auto px-6 py-20 border-t-2 border-gold"
+      >
+        <div class="reveal grid md:grid-cols-[1fr_1.4fr] gap-10">
+          <div>
+            <p
+              class="text-[.85rem] tracking-wide text-brass font-semibold mb-2"
+            >
+              About us
+            </p>
+            <h2 class="text-3xl">Clear, practical, and on your side.</h2>
           </div>
-        </a>
-        <a href="team/aminu-alfa.html" class="block"><h3 class="font-serif text-xl mt-4 group-hover:text-brass transition-colors">Aminu Alfa</h3></a>
-        <p class="text-brass text-[.85rem] font-medium mb-3">LLB, BL</p>
-        <a href="team/aminu-alfa.html" class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass">View profile</a>
-      </article>
-      <article class="group">
-        <a href="team/kelechi-obodo.html" class="block">
-          <div class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#1f1a10] to-[#5f5847] relative flex items-center justify-center">
-            <img src="images/team/kelechi-obodo.jpg" alt="Kelechi Obodo" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()">
-            <span class="text-white/90 font-serif text-5xl">KO</span>
-            <div class="absolute inset-0 flex items-end p-5"><span class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm">Partner</span></div>
+          <div>
+            <p class="text-muted text-[0.95rem] mb-4">
+              G. Omachi &amp; Co. is a Nigerian law firm providing practical,
+              responsive and commercially focused legal services to individuals,
+              families, entrepreneurs, companies and organisations. Our approach
+              is simple: understand the client, understand the problem and
+              identify the most effective legal solution.
+            </p>
+            <p class="text-muted text-[0.95rem] mb-6">
+              We have a long-standing background in advisory work, commercial
+              transactions, regulatory matters, litigation and alternative
+              dispute resolution, and today our practice is centred on:
+              Corporate, Commercial &amp; Regulatory; Family Law; and
+              Immigration Law. Litigation and dispute resolution support those
+              areas whenever court proceedings, negotiation or mediation become
+              necessary.
+            </p>
+            <div class="flex gap-10 mb-8 text-[0.95rem] flex-wrap stat-row">
+              <div>
+                <b
+                  class="font-serif text-4xl text-brass block stat-num"
+                  data-count="15"
+                  data-suffix="+"
+                  >0</b
+                ><span class="text-muted text-sm">Years' experience</span>
+              </div>
+              <div>
+                <b
+                  class="font-serif text-4xl text-brass block stat-num"
+                  data-count="5"
+                  data-suffix=""
+                  >0</b
+                ><span class="text-muted text-sm">Core practice areas</span>
+              </div>
+              <div>
+                <b
+                  class="font-serif text-4xl text-brass block stat-num"
+                  data-count="2"
+                  data-suffix=""
+                  >0</b
+                ><span class="text-muted text-sm">Offices: Jos and Abuja</span>
+              </div>
+            </div>
+            <div class="pill ab-btns flex flex-wrap gap-5">
+              <a
+                href="about.html"
+                class="bg-gold text-white font-bold px-6 py-3 rounded-full hover:bg-[#b8921f]"
+                >Read more</a
+              ><a
+                href="#areas"
+                class="border border-line text-ink font-bold px-6 py-3 rounded-full hover:border-brass"
+                >See our services</a
+              >
+            </div>
           </div>
-        </a>
-        <a href="team/kelechi-obodo.html" class="block"><h3 class="font-serif text-xl mt-4 group-hover:text-brass transition-colors">Kelechi Obodo</h3></a>
-        <p class="text-brass text-[.85rem] font-medium mb-3">LLB, BL, LLM</p>
-        <a href="team/kelechi-obodo.html" class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass">View profile</a>
-      </article>
-      <article class="group team-extra">
-        <a href="team/wemanne-ishaya.html" class="block">
-          <div class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#8a6512] to-[#e3c25a] relative flex items-center justify-center">
-            <img src="images/team/wemanne-ishaya.jpg" alt="Wemanne Ishaya" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()">
-            <span class="text-white/90 font-serif text-5xl">WI</span>
-            <div class="absolute inset-0 flex items-end p-5"><span class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm">Legal Practitioner</span></div>
+        </div>
+        <!-- Values -->
+        <div
+          class="values-grid reveal-stagger grid sm:grid-cols-3 gap-6 mt-14 pt-10 border-t border-line"
+        >
+          <div class="values-card">
+            <span class="text-brass text-2xl font-Manrope">Mission</span>
+            <p class="text-muted text-[.9rem] mt-2 clamp-3">
+              Our mission: effective, practical and client-focused legal
+              services, delivered efficiently and at a reasonable cost.
+            </p>
           </div>
-        </a>
-        <a href="team/wemanne-ishaya.html" class="block"><h3 class="font-serif text-xl mt-4 group-hover:text-brass transition-colors">Wemanne Ishaya</h3></a>
-        <p class="text-brass text-[.85rem] font-medium mb-3">LLB, BL, LLM</p>
-        <a href="team/wemanne-ishaya.html" class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass">View profile</a>
-      </article>
-      <article class="group team-extra">
-        <a href="team/tina-okafor.html" class="block">
-          <div class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#3a2e12] to-[#b48a14] relative flex items-center justify-center">
-            <img src="images/team/tina-okafor.jpg" alt="Tina Okafor" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()">
-            <span class="text-white/90 font-serif text-5xl">TO</span>
-            <div class="absolute inset-0 flex items-end p-5"><span class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm">Legal Practitioner</span></div>
+          <div class="values-card">
+            <span class="text-brass text-2xl font-Manrope">Vision</span>
+            <p class="text-muted text-[.9rem] mt-2 clamp-3">
+              Our vision: to be a trusted modern law firm recognised for
+              integrity, professionalism, responsiveness and excellence in
+              client service.
+            </p>
           </div>
-        </a>
-        <a href="team/tina-okafor.html" class="block"><h3 class="font-serif text-xl mt-4 group-hover:text-brass transition-colors">Tina Okafor</h3></a>
-        <p class="text-brass text-[.85rem] font-medium mb-3">LLB, BL, LLM</p>
-        <a href="team/tina-okafor.html" class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass">View profile</a>
-      </article>
-      <article class="group team-extra">
-        <a href="team/mary-peter.html" class="block">
-          <div class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#5c4a1a] to-[#c9a227] relative flex items-center justify-center">
-            <img src="images/team/mary-peter.jpg" alt="Mary Peter" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()">
-            <span class="text-white/90 font-serif text-5xl">MP</span>
-            <div class="absolute inset-0 flex items-end p-5"><span class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm">Office Manager &amp; Administration</span></div>
+          <div class="values-card">
+            <span class="text-brass text-2xl font-Manrope">Approach</span>
+            <p class="text-muted text-[.9rem] mt-2 clamp-3">
+              Our approach: we explore negotiation, mediation and other dispute
+              resolution before litigation, and we treat every client's
+              information with confidentiality.
+            </p>
           </div>
-        </a>
-        <a href="team/mary-peter.html" class="block"><h3 class="font-serif text-xl mt-4 group-hover:text-brass transition-colors">Mary Peter</h3></a>
-        <p class="text-brass text-[.85rem] font-medium mb-3">Law-office procedures &amp; legal technology</p>
-        <a href="team/mary-peter.html" class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass">View profile</a>
-      </article>
-      <article class="group team-extra">
-        <a href="team/edwin-kelechi.html" class="block">
-          <div class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#1f1a10] to-[#5f5847] relative flex items-center justify-center">
-            <img src="images/team/edwin-kelechi.jpg" alt="Edwin Kelechi" class="ph-img" loading="lazy" decoding="async" onload="this.classList.add('show')" onerror="this.remove()">
-            <span class="text-white/90 font-serif text-5xl">EK</span>
-            <div class="absolute inset-0 flex items-end p-5"><span class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm">Information Technology</span></div>
+        </div>
+      </section>
+
+      <!-- FIRM ATTORNEYS -->
+      <section
+        id="attorneys"
+        class="max-w-[1200px] mx-auto px-6 py-20 border-t-2 border-gold"
+      >
+        <div class="reveal flex flex-wrap justify-between items-end gap-6 mb-6">
+          <div>
+            <p
+              class="text-[.85rem] tracking-wide text-brass font-semibold mb-2"
+            >
+              The team
+            </p>
+            <h2 class="text-2xl max-w-full">The people behind your matter.</h2>
           </div>
-        </a>
-        <a href="team/edwin-kelechi.html" class="block"><h3 class="font-serif text-xl mt-4 group-hover:text-brass transition-colors">Edwin Kelechi</h3></a>
-        <p class="text-brass text-[.85rem] font-medium mb-3">Digital systems &amp; technology infrastructure</p>
-        <a href="team/edwin-kelechi.html" class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass">View profile</a>
-      </article>
-    </div>
-    <div class="mt-8 text-center">
-      <button type="button" id="teamShowMore" class="inline-flex items-center gap-2 text-[.85rem] font-semibold text-brass border border-line rounded-full px-5 py-2.5 hover:bg-panel">See all team members <span class="text-[.7rem] arrow-caret transition-transform">&darr;</span></button>
-    </div>
-  </section>
+          <p class="text-muted max-w-full text-[0.9rem]">
+            Substantial combined experience across advisory work, transactions,
+            compliance, litigation and dispute resolution.
+          </p>
+        </div>
+        <div
+          id="teamGrid"
+          class="reveal-stagger grid sm:grid-cols-2 md:grid-cols-3 gap-6"
+        >
+          <article class="group">
+            <a href="team/gabriel-omachi.html" class="block">
+              <div
+                class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#3a2e12] to-[#8a6512] relative flex items-center justify-center"
+              >
+                <img
+                  src="images/team/gabriel-omachi.jpg"
+                  alt="Gabriel Omachi"
+                  class="ph-img"
+                  loading="eager"
+                  onload="this.classList.add('show')"
+                  onerror="this.remove()"
+                />
+                <span class="text-white/90 font-serif text-5xl">GO</span>
+                <div class="absolute inset-0 flex items-end p-5">
+                  <span
+                    class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm"
+                    >Principal Partner</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a href="team/gabriel-omachi.html" class="block"
+              ><h3
+                class="font-serif text-xl mt-4 group-hover:text-brass transition-colors"
+              >
+                Gabriel Omachi
+              </h3></a
+            >
+            <p class="text-brass text-[.85rem] font-medium mb-3">
+              LLB, BL, LLM, PhD Researcher, Notary Public
+            </p>
+            <a
+              href="team/gabriel-omachi.html"
+              class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass"
+              >View profile</a
+            >
+          </article>
+          <article class="group">
+            <a href="team/aminu-alfa.html" class="block">
+              <div
+                class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#5c4a1a] to-[#c9a227] relative flex items-center justify-center"
+              >
+                <img
+                  src="images/team/aminu-alfa.jpg"
+                  alt="Aminu Alfa"
+                  class="ph-img"
+                  loading="eager"
+                  onload="this.classList.add('show')"
+                  onerror="this.remove()"
+                />
+                <span class="text-white/90 font-serif text-5xl">AA</span>
+                <div class="absolute inset-0 flex items-end p-5">
+                  <span
+                    class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm"
+                    >Partner</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a href="team/aminu-alfa.html" class="block"
+              ><h3
+                class="font-serif text-xl mt-4 group-hover:text-brass transition-colors"
+              >
+                Aminu Alfa
+              </h3></a
+            >
+            <p class="text-brass text-[.85rem] font-medium mb-3">LLB, BL</p>
+            <a
+              href="team/aminu-alfa.html"
+              class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass"
+              >View profile</a
+            >
+          </article>
+          <article class="group">
+            <a href="team/kelechi-obodo.html" class="block">
+              <div
+                class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#1f1a10] to-[#5f5847] relative flex items-center justify-center"
+              >
+                <img
+                  src="images/team/kelechi-obodo.jpg"
+                  alt="Kelechi Obodo"
+                  class="ph-img"
+                  loading="lazy"
+                  decoding="async"
+                  onload="this.classList.add('show')"
+                  onerror="this.remove()"
+                />
+                <span class="text-white/90 font-serif text-5xl">KO</span>
+                <div class="absolute inset-0 flex items-end p-5">
+                  <span
+                    class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm"
+                    >Partner</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a href="team/kelechi-obodo.html" class="block"
+              ><h3
+                class="font-serif text-xl mt-4 group-hover:text-brass transition-colors"
+              >
+                Kelechi Obodo
+              </h3></a
+            >
+            <p class="text-brass text-[.85rem] font-medium mb-3">
+              LLB, BL, LLM
+            </p>
+            <a
+              href="team/kelechi-obodo.html"
+              class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass"
+              >View profile</a
+            >
+          </article>
+          <article class="group team-extra">
+            <a href="team/wemanne-ishaya.html" class="block">
+              <div
+                class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#8a6512] to-[#e3c25a] relative flex items-center justify-center"
+              >
+                <img
+                  src="images/team/wemanne-ishaya.jpg"
+                  alt="Wemanne Ishaya"
+                  class="ph-img"
+                  loading="lazy"
+                  decoding="async"
+                  onload="this.classList.add('show')"
+                  onerror="this.remove()"
+                />
+                <span class="text-white/90 font-serif text-5xl">WI</span>
+                <div class="absolute inset-0 flex items-end p-5">
+                  <span
+                    class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm"
+                    >Legal Practitioner</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a href="team/wemanne-ishaya.html" class="block"
+              ><h3
+                class="font-serif text-xl mt-4 group-hover:text-brass transition-colors"
+              >
+                Wemanne Ishaya
+              </h3></a
+            >
+            <p class="text-brass text-[.85rem] font-medium mb-3">
+              LLB, BL, LLM
+            </p>
+            <a
+              href="team/wemanne-ishaya.html"
+              class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass"
+              >View profile</a
+            >
+          </article>
+          <article class="group team-extra">
+            <a href="team/tina-okafor.html" class="block">
+              <div
+                class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#3a2e12] to-[#b48a14] relative flex items-center justify-center"
+              >
+                <img
+                  src="images/team/tina-okafor.jpg"
+                  alt="Tina Okafor"
+                  class="ph-img"
+                  loading="lazy"
+                  decoding="async"
+                  onload="this.classList.add('show')"
+                  onerror="this.remove()"
+                />
+                <span class="text-white/90 font-serif text-5xl">TO</span>
+                <div class="absolute inset-0 flex items-end p-5">
+                  <span
+                    class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm"
+                    >Legal Practitioner</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a href="team/tina-okafor.html" class="block"
+              ><h3
+                class="font-serif text-xl mt-4 group-hover:text-brass transition-colors"
+              >
+                Tina Okafor
+              </h3></a
+            >
+            <p class="text-brass text-[.85rem] font-medium mb-3">
+              LLB, BL, LLM
+            </p>
+            <a
+              href="team/tina-okafor.html"
+              class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass"
+              >View profile</a
+            >
+          </article>
+          <article class="group team-extra">
+            <a href="team/mary-peter.html" class="block">
+              <div
+                class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#5c4a1a] to-[#c9a227] relative flex items-center justify-center"
+              >
+                <img
+                  src="images/team/mary-peter.jpg"
+                  alt="Mary Peter"
+                  class="ph-img"
+                  loading="lazy"
+                  decoding="async"
+                  onload="this.classList.add('show')"
+                  onerror="this.remove()"
+                />
+                <span class="text-white/90 font-serif text-5xl">MP</span>
+                <div class="absolute inset-0 flex items-end p-5">
+                  <span
+                    class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm"
+                    >Office Manager &amp; Administration</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a href="team/mary-peter.html" class="block"
+              ><h3
+                class="font-serif text-xl mt-4 group-hover:text-brass transition-colors"
+              >
+                Mary Peter
+              </h3></a
+            >
+            <p class="text-brass text-[.85rem] font-medium mb-3">
+              Law-office procedures &amp; legal technology
+            </p>
+            <a
+              href="team/mary-peter.html"
+              class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass"
+              >View profile</a
+            >
+          </article>
+          <article class="group team-extra">
+            <a href="team/edwin-kelechi.html" class="block">
+              <div
+                class="h-[280px] rounded-sm overflow-hidden bg-gradient-to-br from-[#1f1a10] to-[#5f5847] relative flex items-center justify-center"
+              >
+                <img
+                  src="images/team/edwin-kelechi.jpg"
+                  alt="Edwin Kelechi"
+                  class="ph-img"
+                  loading="lazy"
+                  decoding="async"
+                  onload="this.classList.add('show')"
+                  onerror="this.remove()"
+                />
+                <span class="text-white/90 font-serif text-5xl">EK</span>
+                <div class="absolute inset-0 flex items-end p-5">
+                  <span
+                    class="text-white text-[.7rem] tracking-wide uppercase bg-ink/40 px-2 py-1 rounded-sm"
+                    >Information Technology</span
+                  >
+                </div>
+              </div>
+            </a>
+            <a href="team/edwin-kelechi.html" class="block"
+              ><h3
+                class="font-serif text-xl mt-4 group-hover:text-brass transition-colors"
+              >
+                Edwin Kelechi
+              </h3></a
+            >
+            <p class="text-brass text-[.85rem] font-medium mb-3">
+              Digital systems &amp; technology infrastructure
+            </p>
+            <a
+              href="team/edwin-kelechi.html"
+              class="text-[.85rem] underline underline-offset-3 decoration-from-font font-semibold text-ink inline-flex items-center gap-1 group-hover:text-brass"
+              >View profile</a
+            >
+          </article>
+        </div>
+        <div class="mt-8 text-center">
+          <button
+            type="button"
+            id="teamShowMore"
+            class="inline-flex items-center gap-2 text-[.85rem] font-semibold text-brass border border-line rounded-full px-5 py-2.5 hover:bg-panel"
+          >
+            See all team members
+            <span class="text-[.7rem] arrow-caret transition-transform"
+              >&darr;</span
+            >
+          </button>
+        </div>
+      </section>
 
-  <!-- PRACTICE AREAS -->
-  <section id="areas" class="bg-panel border-y border-line py-16">
-    <div class="reveal max-w-[1200px] mx-auto px-6 mb-8">
-      <h2 class="text-3xl mb-2">Where we can help</h2>
-      <p class="text-muted max-w-full text-[0.9rem]">Five focused practice areas, backed by litigation and dispute resolution when a matter needs it.</p>
-    </div>
-    <div class="reveal-stagger grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 max-w-[1200px] mx-auto px-6">
-      <a class="tile group relative block h-[300px] sm:h-[320px] rounded-sm overflow-hidden bg-gradient-to-br from-[#3a2e12] to-[#8a6512]" href="practice/corporate-regulatory.html">
-        <img src="images/practice/corporate-commercial.jpg" alt="Corporate &amp; Regulatory" class="ph-img absolute inset-0 w-full h-full object-cover" loading="lazy" onload="this.classList.add('show')" onerror="this.remove()">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"></div>
-        <div class="absolute inset-0 flex flex-col justify-end p-5">
-          <span class="text-white text-lg sm:text-xl font-serif tile-title leading-snug">Corporate &amp; Regulatory</span>
-          <span class="arrow bg-white/15 group-hover:bg-gold text-white mt-3 w-9 h-9 rounded-full grid place-items-center transition-colors">&rarr;</span>
+      <!-- PRACTICE AREAS -->
+      <section id="areas" class="bg-panel border-y border-line py-16">
+        <div class="reveal max-w-[1200px] mx-auto px-6 mb-8">
+          <h2 class="text-3xl mb-2">Where we can help</h2>
+          <p class="text-muted max-w-full text-[0.9rem]">
+            Five focused practice areas, backed by litigation and dispute
+            resolution when a matter needs it.
+          </p>
         </div>
-      </a>
-      <a class="tile group relative block h-[300px] sm:h-[320px] rounded-sm overflow-hidden bg-gradient-to-br from-[#5c4a1a] to-[#c9a227]" href="practice/commercial-contracts.html">
-        <img src="images/practice/corporate-finance.jpg" alt="Commercial Contracts &amp; Disputes" class="ph-img absolute inset-0 w-full h-full object-cover" loading="lazy" onload="this.classList.add('show')" onerror="this.remove()">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"></div>
-        <div class="absolute inset-0 flex flex-col justify-end p-5">
-          <span class="text-white text-lg sm:text-xl font-serif tile-title leading-snug">Commercial Contracts &amp; Disputes</span>
-          <span class="arrow bg-white/15 group-hover:bg-gold text-white mt-3 w-9 h-9 rounded-full grid place-items-center transition-colors">&rarr;</span>
+        <div
+          class="reveal-stagger grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 max-w-[1200px] mx-auto px-6"
+        >
+          <a
+            class="tile group relative block h-[300px] sm:h-[320px] rounded-sm overflow-hidden bg-gradient-to-br from-[#3a2e12] to-[#8a6512]"
+            href="practice/corporate-regulatory.html"
+          >
+            <img
+              src="images/practice/corporate-commercial.jpg"
+              alt="Corporate &amp; Regulatory"
+              class="ph-img absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              onload="this.classList.add('show')"
+              onerror="this.remove()"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"
+            ></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-5">
+              <span
+                class="text-white text-lg sm:text-xl font-serif tile-title leading-snug"
+                >Corporate &amp; Regulatory</span
+              >
+              <span
+                class="arrow bg-white/15 group-hover:bg-gold text-white mt-3 w-9 h-9 rounded-full grid place-items-center transition-colors"
+                >&rarr;</span
+              >
+            </div>
+          </a>
+          <a
+            class="tile group relative block h-[300px] sm:h-[320px] rounded-sm overflow-hidden bg-gradient-to-br from-[#5c4a1a] to-[#c9a227]"
+            href="practice/commercial-contracts.html"
+          >
+            <img
+              src="images/practice/corporate-finance.jpg"
+              alt="Commercial Contracts &amp; Disputes"
+              class="ph-img absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              onload="this.classList.add('show')"
+              onerror="this.remove()"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"
+            ></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-5">
+              <span
+                class="text-white text-lg sm:text-xl font-serif tile-title leading-snug"
+                >Commercial Contracts &amp; Disputes</span
+              >
+              <span
+                class="arrow bg-white/15 group-hover:bg-gold text-white mt-3 w-9 h-9 rounded-full grid place-items-center transition-colors"
+                >&rarr;</span
+              >
+            </div>
+          </a>
+          <a
+            class="tile group relative block h-[300px] sm:h-[320px] rounded-sm overflow-hidden bg-gradient-to-br from-[#1f1a10] to-[#5f5847]"
+            href="practice/family-law.html"
+          >
+            <img
+              src="images/practice/family-law.jpg"
+              alt="Family Law"
+              class="ph-img absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              onload="this.classList.add('show')"
+              onerror="this.remove()"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"
+            ></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-5">
+              <span
+                class="text-white text-lg sm:text-xl font-serif tile-title leading-snug"
+                >Family Law</span
+              >
+              <span
+                class="arrow bg-white/15 group-hover:bg-gold text-white mt-3 w-9 h-9 rounded-full grid place-items-center transition-colors"
+                >&rarr;</span
+              >
+            </div>
+          </a>
+          <a
+            class="tile group relative block h-[300px] sm:h-[320px] rounded-sm overflow-hidden bg-gradient-to-br from-[#8a6512] to-[#e3c25a]"
+            href="practice/immigration-law.html"
+          >
+            <img
+              src="images/practice/immigration.jpg"
+              alt="Immigration Law"
+              class="ph-img absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              onload="this.classList.add('show')"
+              onerror="this.remove()"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"
+            ></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-5">
+              <span
+                class="text-white text-lg sm:text-xl font-serif tile-title leading-snug"
+                >Immigration Law</span
+              >
+              <span
+                class="arrow bg-white/15 group-hover:bg-gold text-white mt-3 w-9 h-9 rounded-full grid place-items-center transition-colors"
+                >&rarr;</span
+              >
+            </div>
+          </a>
+          <a
+            class="tile group relative block h-[300px] sm:h-[320px] rounded-sm overflow-hidden bg-gradient-to-br from-[#3a2e12] to-[#b48a14]"
+            href="practice/dispute-resolution.html"
+          >
+            <img
+              src="images/practice/litigation.jpg"
+              alt="Dispute Resolution &amp; Litigation"
+              class="ph-img absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
+              onload="this.classList.add('show')"
+              onerror="this.remove()"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"
+            ></div>
+            <div class="absolute inset-0 flex flex-col justify-end p-5">
+              <span
+                class="text-white text-lg sm:text-xl font-serif tile-title leading-snug"
+                >Dispute Resolution &amp; Litigation</span
+              >
+              <span
+                class="arrow bg-white/15 group-hover:bg-gold text-white mt-3 w-9 h-9 rounded-full grid place-items-center transition-colors"
+                >&rarr;</span
+              >
+            </div>
+          </a>
         </div>
-      </a>
-      <a class="tile group relative block h-[300px] sm:h-[320px] rounded-sm overflow-hidden bg-gradient-to-br from-[#1f1a10] to-[#5f5847]" href="practice/family-law.html">
-        <img src="images/practice/family-law.jpg" alt="Family Law" class="ph-img absolute inset-0 w-full h-full object-cover" loading="lazy" onload="this.classList.add('show')" onerror="this.remove()">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"></div>
-        <div class="absolute inset-0 flex flex-col justify-end p-5">
-          <span class="text-white text-lg sm:text-xl font-serif tile-title leading-snug">Family Law</span>
-          <span class="arrow bg-white/15 group-hover:bg-gold text-white mt-3 w-9 h-9 rounded-full grid place-items-center transition-colors">&rarr;</span>
-        </div>
-      </a>
-      <a class="tile group relative block h-[300px] sm:h-[320px] rounded-sm overflow-hidden bg-gradient-to-br from-[#8a6512] to-[#e3c25a]" href="practice/immigration-law.html">
-        <img src="images/practice/immigration.jpg" alt="Immigration Law" class="ph-img absolute inset-0 w-full h-full object-cover" loading="lazy" onload="this.classList.add('show')" onerror="this.remove()">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"></div>
-        <div class="absolute inset-0 flex flex-col justify-end p-5">
-          <span class="text-white text-lg sm:text-xl font-serif tile-title leading-snug">Immigration Law</span>
-          <span class="arrow bg-white/15 group-hover:bg-gold text-white mt-3 w-9 h-9 rounded-full grid place-items-center transition-colors">&rarr;</span>
-        </div>
-      </a>
-      <a class="tile group relative block h-[300px] sm:h-[320px] rounded-sm overflow-hidden bg-gradient-to-br from-[#3a2e12] to-[#b48a14]" href="practice/dispute-resolution.html">
-        <img src="images/practice/litigation.jpg" alt="Dispute Resolution &amp; Litigation" class="ph-img absolute inset-0 w-full h-full object-cover" loading="lazy" onload="this.classList.add('show')" onerror="this.remove()">
-        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"></div>
-        <div class="absolute inset-0 flex flex-col justify-end p-5">
-          <span class="text-white text-lg sm:text-xl font-serif tile-title leading-snug">Dispute Resolution &amp; Litigation</span>
-          <span class="arrow bg-white/15 group-hover:bg-gold text-white mt-3 w-9 h-9 rounded-full grid place-items-center transition-colors">&rarr;</span>
-        </div>
-      </a>
-    </div>
-  </section>
+      </section>
 
-  <!-- WHY CHOOSE US -->
-  <section id="why" class="max-w-[1200px] mx-auto px-6 py-20 border-t-2 border-gold">
-    <div class="reveal mb-10">
-      <p class="text-[.85rem] tracking-wide text-brass font-semibold mb-2">Why choose us</p>
-      <h2 class="text-3xl max-w-[22ch]">Speak to your lawyer. Understand your matter.</h2>
-    </div>
-    <div class="values-grid reveal-stagger grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      <div class="values-card group relative bg-white border border-line rounded-sm p-6 hover:border-brass hover:shadow-[0_8px_24px_-12px_rgba(20,17,10,.25)] transition-all">
-        <div class="w-11 h-11 rounded-full bg-panel border border-line grid place-items-center mb-4 group-hover:bg-gold/10 group-hover:border-brass transition-colors">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="text-brass"><path d="M4 21V9l8-5 8 5v12" stroke-linejoin="round"/><path d="M9 21v-6h6v6"/></svg>
+      <!-- WHY CHOOSE US -->
+      <section
+        id="why"
+        class="max-w-[1200px] mx-auto px-6 py-20 border-t-2 border-gold"
+      >
+        <div class="reveal mb-10">
+          <p class="text-[.85rem] tracking-wide text-brass font-semibold mb-2">
+            Why choose us
+          </p>
+          <h2 class="text-3xl max-w-[22ch]">
+            Speak to your lawyer. Understand your matter.
+          </h2>
         </div>
-        <span class="text-ink text-[1.05rem] font-serif block mb-1.5">Experience</span>
-        <p class="text-muted text-[.9rem] leading-relaxed">Substantial combined experience across advisory work, transactions, compliance, litigation and dispute resolution.</p>
-      </div>
-      <div class="values-card group relative bg-white border border-line rounded-sm p-6 hover:border-brass hover:shadow-[0_8px_24px_-12px_rgba(20,17,10,.25)] transition-all">
-        <div class="w-11 h-11 rounded-full bg-panel border border-line grid place-items-center mb-4 group-hover:bg-gold/10 group-hover:border-brass transition-colors">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="text-brass"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <div
+          class="values-grid reveal-stagger grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          <div
+            class="values-card group relative bg-white border border-line rounded-sm p-6 hover:border-brass hover:shadow-[0_8px_24px_-12px_rgba(20,17,10,.25)] transition-all"
+          >
+            <div
+              class="w-11 h-11 rounded-full bg-panel border border-line grid place-items-center mb-4 group-hover:bg-gold/10 group-hover:border-brass transition-colors"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                class="text-brass"
+              >
+                <path d="M4 21V9l8-5 8 5v12" stroke-linejoin="round" />
+                <path d="M9 21v-6h6v6" />
+              </svg>
+            </div>
+            <span class="text-ink text-[1.05rem] font-serif block mb-1.5"
+              >Experience</span
+            >
+            <p class="text-muted text-[.9rem] leading-relaxed">
+              Substantial combined experience across advisory work,
+              transactions, compliance, litigation and dispute resolution.
+            </p>
+          </div>
+          <div
+            class="values-card group relative bg-white border border-line rounded-sm p-6 hover:border-brass hover:shadow-[0_8px_24px_-12px_rgba(20,17,10,.25)] transition-all"
+          >
+            <div
+              class="w-11 h-11 rounded-full bg-panel border border-line grid place-items-center mb-4 group-hover:bg-gold/10 group-hover:border-brass transition-colors"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                class="text-brass"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3.5 2" />
+              </svg>
+            </div>
+            <span class="text-ink text-[1.05rem] font-serif block mb-1.5"
+              >Accessibility</span
+            >
+            <p class="text-muted text-[.9rem] leading-relaxed">
+              Traditional office-based representation combined with modern
+              remote communication and consultation.
+            </p>
+          </div>
+          <div
+            class="values-card group relative bg-white border border-line rounded-sm p-6 hover:border-brass hover:shadow-[0_8px_24px_-12px_rgba(20,17,10,.25)] transition-all"
+          >
+            <div
+              class="w-11 h-11 rounded-full bg-panel border border-line grid place-items-center mb-4 group-hover:bg-gold/10 group-hover:border-brass transition-colors"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                class="text-brass"
+              >
+                <path d="M3 3v18h18" />
+                <path d="M7 15l4-5 3 3 5-7" />
+              </svg>
+            </div>
+            <span class="text-ink text-[1.05rem] font-serif block mb-1.5"
+              >Commercial awareness</span
+            >
+            <p class="text-muted text-[.9rem] leading-relaxed">
+              Advice that considers your business objectives as well as the
+              legal position.
+            </p>
+          </div>
+          <div
+            class="values-card group relative bg-white border border-line rounded-sm p-6 hover:border-brass hover:shadow-[0_8px_24px_-12px_rgba(20,17,10,.25)] transition-all"
+          >
+            <div
+              class="w-11 h-11 rounded-full bg-panel border border-line grid place-items-center mb-4 group-hover:bg-gold/10 group-hover:border-brass transition-colors"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                class="text-brass"
+              >
+                <circle cx="12" cy="8" r="3.5" />
+                <path d="M4.5 20c1.7-3.5 5-5.5 7.5-5.5s5.8 2 7.5 5.5" />
+              </svg>
+            </div>
+            <span class="text-ink text-[1.05rem] font-serif block mb-1.5"
+              >Personal service</span
+            >
+            <p class="text-muted text-[.9rem] leading-relaxed">
+              Every client&rsquo;s circumstances are different, and our advice
+              reflects that.
+            </p>
+          </div>
+          <div
+            class="values-card group relative bg-white border border-line rounded-sm p-6 hover:border-brass hover:shadow-[0_8px_24px_-12px_rgba(20,17,10,.25)] transition-all"
+          >
+            <div
+              class="w-11 h-11 rounded-full bg-panel border border-line grid place-items-center mb-4 group-hover:bg-gold/10 group-hover:border-brass transition-colors"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                class="text-brass"
+              >
+                <path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z" />
+              </svg>
+            </div>
+            <span class="text-ink text-[1.05rem] font-serif block mb-1.5"
+              >Dispute-resolution capability</span
+            >
+            <p class="text-muted text-[.9rem] leading-relaxed">
+              Litigation experience combined with mediation, conciliation and
+              negotiation.
+            </p>
+          </div>
+          <div
+            class="values-card group relative bg-white border border-line rounded-sm p-6 hover:border-brass hover:shadow-[0_8px_24px_-12px_rgba(20,17,10,.25)] transition-all"
+          >
+            <div
+              class="w-11 h-11 rounded-full bg-panel border border-line grid place-items-center mb-4 group-hover:bg-gold/10 group-hover:border-brass transition-colors"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                class="text-brass"
+              >
+                <path
+                  d="M12 2l3 3h4v4l3 3-3 3v4h-4l-3 3-3-3H5v-4l-3-3 3-3V5h4z"
+                />
+              </svg>
+            </div>
+            <span class="text-ink text-[1.05rem] font-serif block mb-1.5"
+              >Professional integrity</span
+            >
+            <p class="text-muted text-[.9rem] leading-relaxed">
+              Confidentiality, competence, responsibility and respect remain
+              central to how we practise.
+            </p>
+          </div>
         </div>
-        <span class="text-ink text-[1.05rem] font-serif block mb-1.5">Accessibility</span>
-        <p class="text-muted text-[.9rem] leading-relaxed">Traditional office-based representation combined with modern remote communication and consultation.</p>
-      </div>
-      <div class="values-card group relative bg-white border border-line rounded-sm p-6 hover:border-brass hover:shadow-[0_8px_24px_-12px_rgba(20,17,10,.25)] transition-all">
-        <div class="w-11 h-11 rounded-full bg-panel border border-line grid place-items-center mb-4 group-hover:bg-gold/10 group-hover:border-brass transition-colors">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="text-brass"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
-        </div>
-        <span class="text-ink text-[1.05rem] font-serif block mb-1.5">Commercial awareness</span>
-        <p class="text-muted text-[.9rem] leading-relaxed">Advice that considers your business objectives as well as the legal position.</p>
-      </div>
-      <div class="values-card group relative bg-white border border-line rounded-sm p-6 hover:border-brass hover:shadow-[0_8px_24px_-12px_rgba(20,17,10,.25)] transition-all">
-        <div class="w-11 h-11 rounded-full bg-panel border border-line grid place-items-center mb-4 group-hover:bg-gold/10 group-hover:border-brass transition-colors">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="text-brass"><circle cx="12" cy="8" r="3.5"/><path d="M4.5 20c1.7-3.5 5-5.5 7.5-5.5s5.8 2 7.5 5.5"/></svg>
-        </div>
-        <span class="text-ink text-[1.05rem] font-serif block mb-1.5">Personal service</span>
-        <p class="text-muted text-[.9rem] leading-relaxed">Every client&rsquo;s circumstances are different, and our advice reflects that.</p>
-      </div>
-      <div class="values-card group relative bg-white border border-line rounded-sm p-6 hover:border-brass hover:shadow-[0_8px_24px_-12px_rgba(20,17,10,.25)] transition-all">
-        <div class="w-11 h-11 rounded-full bg-panel border border-line grid place-items-center mb-4 group-hover:bg-gold/10 group-hover:border-brass transition-colors">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="text-brass"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>
-        </div>
-        <span class="text-ink text-[1.05rem] font-serif block mb-1.5">Dispute-resolution capability</span>
-        <p class="text-muted text-[.9rem] leading-relaxed">Litigation experience combined with mediation, conciliation and negotiation.</p>
-      </div>
-      <div class="values-card group relative bg-white border border-line rounded-sm p-6 hover:border-brass hover:shadow-[0_8px_24px_-12px_rgba(20,17,10,.25)] transition-all">
-        <div class="w-11 h-11 rounded-full bg-panel border border-line grid place-items-center mb-4 group-hover:bg-gold/10 group-hover:border-brass transition-colors">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" class="text-brass"><path d="M12 2l3 3h4v4l3 3-3 3v4h-4l-3 3-3-3H5v-4l-3-3 3-3V5h4z"/></svg>
-        </div>
-        <span class="text-ink text-[1.05rem] font-serif block mb-1.5">Professional integrity</span>
-        <p class="text-muted text-[.9rem] leading-relaxed">Confidentiality, competence, responsibility and respect remain central to how we practise.</p>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- OFFICE LOCATIONS -->
-  <section id="offices" class="max-w-[1200px] mx-auto px-6 py-20 border-t-2 border-gold">
-    <p class="text-[.85rem] tracking-wide text-brass font-semibold mb-2">Where we are</p>
-    <h2 class="text-3xl mb-10">Find us.</h2>
-    <div class="reveal grid md:grid-cols-2 gap-6">
-      <div class="rounded-sm border border-line overflow-hidden">
-        <div class="office-img relative overflow-hidden h-36 bg-gradient-to-br from-[#3a2e12] to-[#8a6512] flex items-end p-5">
-          <img src="images/offices/jos.jpg" alt="Jos office" class="ph-img absolute inset-0 w-full h-full object-cover" loading="lazy" onload="this.classList.add('show')" onerror="this.remove()">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"></div>
-          <span class="relative text-white font-serif text-2xl">Jos &mdash; Plateau State</span>
-        </div>
-        <div class="p-6 grid gap-3 text-[.95rem]">
-          <p class="text-muted">No. 9, St Patricks Avenue, St Piran's Street<br>Jos, Plateau State, Nigeria</p>
-          <p><span class="text-brass font-semibold">Hours:</span> Mon&ndash;Fri, 9am&ndash;5pm</p>
-          <a href="https://maps.app.goo.gl/1zs78oXeJkP6MfQ48?g_st=ac" target="_blank" rel="noopener" class="text-gold text-sm font-semibold inline-flex items-center gap-1">Get directions &#8599;</a>
-        </div>
-      </div>
+      <!-- OFFICE LOCATIONS -->
+      <section
+        id="offices"
+        class="max-w-[1200px] mx-auto px-6 py-20 border-t-2 border-gold"
+      >
+        <p class="text-[.85rem] tracking-wide text-brass font-semibold mb-2">
+          Where we are
+        </p>
+        <h2 class="text-3xl mb-10">Find us.</h2>
+        <div class="reveal grid md:grid-cols-2 gap-6">
+          <div class="rounded-sm border border-line overflow-hidden">
+            <div
+              class="office-img relative overflow-hidden h-36 bg-gradient-to-br from-[#3a2e12] to-[#8a6512] flex items-end p-5"
+            >
+              <img
+                src="images/offices/jos.jpg"
+                alt="Jos office"
+                class="ph-img absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                onload="this.classList.add('show')"
+                onerror="this.remove()"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"
+              ></div>
+              <span class="relative text-white font-serif text-2xl"
+                >Jos &mdash; Plateau State</span
+              >
+            </div>
+            <div class="p-6 grid gap-3 text-[.95rem]">
+              <p class="text-muted">
+                No. 9, St Patricks Avenue, St Piran's Street<br />Jos, Plateau
+                State, Nigeria
+              </p>
+              <p>
+                <span class="text-brass font-semibold">Hours:</span>
+                Mon&ndash;Fri, 9am&ndash;5pm
+              </p>
+              <a
+                href="https://maps.app.goo.gl/1zs78oXeJkP6MfQ48?g_st=ac"
+                target="_blank"
+                rel="noopener"
+                class="text-gold text-sm font-semibold inline-flex items-center gap-1"
+                >Get directions &#8599;</a
+              >
+            </div>
+          </div>
 
-      <div class="rounded-sm border border-line overflow-hidden">
-        <div class="office-img relative overflow-hidden h-36 bg-gradient-to-br from-[#5c4a1a] to-[#c9a227] flex items-end p-5">
-          <img src="images/offices/abuja.jpg" alt="Abuja office" class="ph-img absolute inset-0 w-full h-full object-cover" loading="lazy" onload="this.classList.add('show')" onerror="this.remove()">
-          <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"></div>
-          <span class="relative text-white font-serif text-2xl">Abuja &mdash; FCT</span>
+          <div class="rounded-sm border border-line overflow-hidden">
+            <div
+              class="office-img relative overflow-hidden h-36 bg-gradient-to-br from-[#5c4a1a] to-[#c9a227] flex items-end p-5"
+            >
+              <img
+                src="images/offices/abuja.jpg"
+                alt="Abuja office"
+                class="ph-img absolute inset-0 w-full h-full object-cover"
+                loading="lazy"
+                onload="this.classList.add('show')"
+                onerror="this.remove()"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/15 to-transparent"
+              ></div>
+              <span class="relative text-white font-serif text-2xl"
+                >Abuja &mdash; FCT</span
+              >
+            </div>
+            <div class="p-6 grid gap-3 text-[.95rem]">
+              <p class="text-muted">
+                No. 26, Ogbomosho Street, Garki, Area 8<br />Abuja, Nigeria
+              </p>
+              <p>
+                <span class="text-brass font-semibold">Hours:</span>
+                Mon&ndash;Fri, 9am&ndash;5pm
+              </p>
+              <a
+                href="https://maps.app.goo.gl/nq6a4FYcjgJGLtEn7?g_st=ac"
+                target="_blank"
+                rel="noopener"
+                class="text-gold text-sm font-semibold inline-flex items-center gap-1"
+                >Get directions &#8599;</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="p-6 grid gap-3 text-[.95rem]">
-          <p class="text-muted">No. 26, Ogbomosho Street, Garki, Area 8<br>Abuja, Nigeria</p>
-          <p><span class="text-brass font-semibold">Hours:</span> Mon&ndash;Fri, 9am&ndash;5pm</p>
-          <a href="https://maps.app.goo.gl/nq6a4FYcjgJGLtEn7?g_st=ac" target="_blank" rel="noopener" class="text-gold text-sm font-semibold inline-flex items-center gap-1">Get directions &#8599;</a>
+      </section>
+
+      <!-- CONTACT FORM -->
+      <section id="contact-form" class="bg-panel border-y border-line py-20">
+        <div class="reveal max-w-[720px] mx-auto px-6">
+          <p
+            class="text-[.85rem] tracking-wide text-brass font-semibold mb-2 text-center"
+          >
+            Get in touch
+          </p>
+          <h2 class="text-3xl mb-2 text-center">Tell us about your matter.</h2>
+          <p class="text-muted text-center mb-10">
+            Send us a message and a member of our team will get back to you
+            within one business day. You can also consult us remotely; physical
+            attendance is not always necessary.
+          </p>
+          <form
+            id="contactForm"
+            class="grid gap-6 bg-white border border-line rounded-sm p-8"
+            novalidate
+          >
+            <div class="grid sm:grid-cols-2 gap-6">
+              <label class="text-[.85rem] font-medium"
+                >Full name
+                <input
+                  required
+                  name="name"
+                  class="fld mt-1"
+                  placeholder="Your name"
+                />
+                <span class="err hidden text-[.75rem] text-[#b5502e] mt-1 block"
+                  >Please enter your name.</span
+                >
+              </label>
+              <label class="text-[.85rem] font-medium"
+                >Phone number
+                <input
+                  required
+                  name="phone"
+                  type="tel"
+                  pattern="[0-9+()\-\s]{7,20}"
+                  class="fld mt-1"
+                  placeholder="+234 000 000 0000"
+                />
+                <span class="err hidden text-[.75rem] text-[#b5502e] mt-1 block"
+                  >Enter a valid phone number.</span
+                >
+              </label>
+            </div>
+            <label class="text-[.85rem] font-medium"
+              >Email address
+              <input
+                required
+                name="email"
+                type="email"
+                class="fld mt-1"
+                placeholder="you@example.com"
+              />
+              <span class="err hidden text-[.75rem] text-[#b5502e] mt-1 block"
+                >Enter a valid email address.</span
+              >
+            </label>
+            <label class="text-[.85rem] font-medium"
+              >Practice area
+              <select name="area" class="fld mt-1 bg-white">
+                <option>Corporate &amp; Regulatory</option>
+                <option>Commercial Contracts &amp; Disputes</option>
+                <option>Family Law</option>
+                <option>Immigration Law</option>
+                <option>Dispute Resolution &amp; Litigation</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label class="text-[.85rem] font-medium"
+              >How can we help?
+              <textarea
+                required
+                name="message"
+                rows="4"
+                class="fld mt-1 resize-none"
+                placeholder="A brief summary of your matter"
+              ></textarea>
+              <span class="err hidden text-[.75rem] text-[#b5502e] mt-1 block"
+                >Please tell us a little about your matter.</span
+              >
+            </label>
+            <label class="flex items-start gap-3 text-[.8rem] text-muted">
+              <input required type="checkbox" name="consent" class="mt-1" />
+              I understand this form does not create a lawyer-client
+              relationship and that information I share is not privileged until
+              a formal engagement is confirmed.
+            </label>
+            <button
+              type="submit"
+              class="bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f] justify-self-start"
+            >
+              Send message
+            </button>
+            <p id="formOk" class="hidden text-brass text-sm font-medium">
+              Thanks for contacting us, your email app should now open with your
+              message pre-filled. Just hit send from there.
+            </p>
+            <p id="formErr" class="hidden text-[#b5502e] text-sm font-medium">
+              Please correct the highlighted fields above and try again.
+            </p>
+          </form>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- CONTACT FORM -->
-  <section id="contact-form" class="bg-panel border-y border-line py-20">
-    <div class="reveal max-w-[720px] mx-auto px-6">
-      <p class="text-[.85rem] tracking-wide text-brass font-semibold mb-2 text-center">Get in touch</p>
-      <h2 class="text-3xl mb-2 text-center">Tell us about your matter.</h2>
-      <p class="text-muted text-center mb-10">Send us a message and a member of our team will get back to you within one business day. You can also consult us remotely; physical attendance is not always necessary.</p>
-      <form id="contactForm" class="grid gap-6 bg-white border border-line rounded-sm p-8" novalidate>
-        <div class="grid sm:grid-cols-2 gap-6">
-          <label class="text-[.85rem] font-medium">Full name
-            <input required name="name" class="fld mt-1" placeholder="Your name">
-            <span class="err hidden text-[.75rem] text-[#b5502e] mt-1 block">Please enter your name.</span>
-          </label>
-          <label class="text-[.85rem] font-medium">Phone number
-            <input required name="phone" type="tel" pattern="[0-9+()\-\s]{7,20}" class="fld mt-1" placeholder="+234 000 000 0000">
-            <span class="err hidden text-[.75rem] text-[#b5502e] mt-1 block">Enter a valid phone number.</span>
-          </label>
+      <!-- NEWSLETTER -->
+      <section id="contact" class="bg-ink text-[#d9d2bf]">
+        <div
+          class="reveal max-w-[1200px] mx-auto px-6 py-16 grid md:grid-cols-[1fr_1.2fr] gap-10 border-b border-[#3a3323]"
+        >
+          <div>
+            <h3 class="text-white text-xl font-serif mb-2">
+              Prefer to reach us directly?
+            </h3>
+            <p class="text-[.95rem]">
+              <span class="font-semibold">Jos</span>: No. 9, St Patricks Avenue,
+              St Piran's Street, Plateau State. <br /><span
+                class="font-semibold"
+                >Abuja</span
+              >: No. 26, Ogbomosho Street, Garki, Area 8.<br /><a
+                href="mailto:info@g-omachi.com"
+                class="hover:text-gold"
+                >info@g-omachi.com</a
+              >
+            </p>
+            <p class="text-[.85rem] mt-2 text-[#9d957f]">
+              Mon&ndash;Fri, 9am&ndash;5pm
+            </p>
+          </div>
+          <form id="nl" class="grid gap-5">
+            <h3 class="text-white text-xl font-serif">
+              Subscribe to our newsletter.
+            </h3>
+            <div class="grid grid-cols-2 gap-5">
+              <label class="text-[.8rem]"
+                >First name<input
+                  required
+                  class="w-full bg-transparent border-b border-[#4a4230] py-2 mt-1 focus:outline-none focus:border-gold"
+              /></label>
+              <label class="text-[.8rem]"
+                >Last name<input
+                  required
+                  class="w-full bg-transparent border-b border-[#4a4230] py-2 mt-1 focus:outline-none focus:border-gold"
+              /></label>
+            </div>
+            <div class="flex items-end gap-3">
+              <label class="text-[.8rem] flex-1"
+                >Email<input
+                  required
+                  type="email"
+                  class="w-full bg-transparent border-b border-[#4a4230] py-2 mt-1 focus:outline-none focus:border-gold"
+              /></label>
+              <button class="arrow bg-gold text-white flex-none" type="submit">
+                &rarr;
+              </button>
+            </div>
+            <p id="ok" class="hidden text-gold text-sm">
+              Thanks! You're subscribed.
+            </p>
+          </form>
         </div>
-        <label class="text-[.85rem] font-medium">Email address
-          <input required name="email" type="email" class="fld mt-1" placeholder="you@example.com">
-          <span class="err hidden text-[.75rem] text-[#b5502e] mt-1 block">Enter a valid email address.</span>
-        </label>
-        <label class="text-[.85rem] font-medium">Practice area
-          <select name="area" class="fld mt-1 bg-white">
-            <option>Corporate &amp; Regulatory</option>
-            <option>Commercial Contracts &amp; Disputes</option>
-            <option>Family Law</option>
-            <option>Immigration Law</option>
-            <option>Dispute Resolution &amp; Litigation</option>
-            <option>Other</option>
-          </select>
-        </label>
-        <label class="text-[.85rem] font-medium">How can we help?
-          <textarea required name="message" rows="4" class="fld mt-1 resize-none" placeholder="A brief summary of your matter"></textarea>
-          <span class="err hidden text-[.75rem] text-[#b5502e] mt-1 block">Please tell us a little about your matter.</span>
-        </label>
-        <label class="flex items-start gap-3 text-[.8rem] text-muted">
-          <input required type="checkbox" name="consent" class="mt-1">
-          I understand this form does not create a lawyer-client relationship and that information I share is not privileged until a formal engagement is confirmed.
-        </label>
-        <button type="submit" class="bg-gold text-white font-semibold px-6 py-3 rounded-full hover:bg-[#b8921f] justify-self-start">Send message</button>
-        <p id="formOk" class="hidden text-brass text-sm font-medium">Thanks for contacting us, your email app should now open with your message pre-filled. Just hit send from there.</p>
-        <p id="formErr" class="hidden text-[#b5502e] text-sm font-medium">Please correct the highlighted fields above and try again.</p>
-      </form>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section id="contact" class="bg-ink text-[#d9d2bf]">
-    <div class="reveal max-w-[1200px] mx-auto px-6 py-16 grid md:grid-cols-[1fr_1.2fr] gap-10 border-b border-[#3a3323]">
-      <div>
-        <h3 class="text-white text-xl font-serif mb-2">Prefer to reach us directly?</h3>
-        <p class="text-[.95rem]"><span class="font-semibold">Jos</span>: No. 9, St Patricks Avenue, St Piran's Street, Plateau State. <br><span class="font-semibold">Abuja</span>: No. 26, Ogbomosho Street, Garki, Area 8.<br><a href="mailto:info@g-omachi.com" class="hover:text-gold">info@g-omachi.com</a></p>
-        <p class="text-[.85rem] mt-2 text-[#9d957f]">Mon&ndash;Fri, 9am&ndash;5pm</p>
-      </div>
-      <form id="nl" class="grid gap-5">
-        <h3 class="text-white text-xl font-serif">Subscribe to our newsletter.</h3>
-        <div class="grid grid-cols-2 gap-5">
-          <label class="text-[.8rem]">First name<input required class="w-full bg-transparent border-b border-[#4a4230] py-2 mt-1 focus:outline-none focus:border-gold"></label>
-          <label class="text-[.8rem]">Last name<input required class="w-full bg-transparent border-b border-[#4a4230] py-2 mt-1 focus:outline-none focus:border-gold"></label>
+        <div
+          class="max-w-[1200px] mx-auto px-6 py-10 grid sm:grid-cols-3 gap-8 text-[.9rem]"
+        >
+          <div>
+            <h4 class="text-white font-semibold mb-3">Firm</h4>
+            <ul class="space-y-2">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#attorneys">Our Lawyers</a></li>
+              <li><a href="#areas">Practice Areas</a></li>
+              <li><a href="#offices">Offices</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-3">Legal</h4>
+            <ul class="space-y-2">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Disclaimer</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-3">Connect</h4>
+            <div class="flex gap-2.5">
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.83v1.98h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8.5z"
+                  /></svg
+              ></a>
+              <a
+                href="https://x.com/G_Omachi_and_co"
+                target="_blank"
+                rel="noopener"
+                aria-label="X (Twitter)"
+                class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18.9 2h3.1l-7.6 8.7L23.3 22h-6.9l-5.4-6.6L4.4 22H1.3l8.1-9.3L1 2h7.1l4.9 6.1L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"
+                  /></svg
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"
+                ><svg
+                  viewBox="0 0 24 24"
+                  width="18"
+                  height="18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.3"
+                    cy="6.7"
+                    r="1.1"
+                    fill="currentColor"
+                    stroke="none"
+                  /></svg
+              ></a>
+            </div>
+          </div>
         </div>
-        <div class="flex items-end gap-3">
-          <label class="text-[.8rem] flex-1">Email<input required type="email" class="w-full bg-transparent border-b border-[#4a4230] py-2 mt-1 focus:outline-none focus:border-gold"></label>
-          <button class="arrow bg-gold text-white flex-none" type="submit">&rarr;</button>
+        <div
+          class="max-w-[1200px] mx-auto px-6 py-6 border-t border-[#3a3323] flex flex-wrap justify-between gap-3 text-[.8rem] text-[#9d957f]"
+        >
+          <span
+            >&copy; 2019&ndash;<span id="y"></span> G. Omachi &amp; Co.
+            (Barristers and Solicitors). All rights reserved.</span
+          >
+          <span class="max-w-[52ch]"
+            >Nothing on this website is legal advice. Contacting us does not
+            create a lawyer-client relationship.</span
+          >
         </div>
-        <p id="ok" class="hidden text-gold text-sm">Thanks! You're subscribed.</p>
-      </form>
-    </div>
-    <div class="max-w-[1200px] mx-auto px-6 py-10 grid sm:grid-cols-3 gap-8 text-[.9rem]">
-      <div><h4 class="text-white font-semibold mb-3">Firm</h4><ul class="space-y-2"><li><a href="about.html">About Us</a></li><li><a href="#attorneys">Our Lawyers</a></li><li><a href="#areas">Practice Areas</a></li><li><a href="#offices">Offices</a></li></ul></div>
-      <div><h4 class="text-white font-semibold mb-3">Legal</h4><ul class="space-y-2"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li><li><a href="#">Disclaimer</a></li></ul></div>
-      <div><h4 class="text-white font-semibold mb-3">Connect</h4><div class="flex gap-2.5">
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.83v1.98h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8.5z"/></svg></a>
-        <a href="https://x.com/G_Omachi_and_co" target="_blank" rel="noopener" aria-label="X (Twitter)" class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M18.9 2h3.1l-7.6 8.7L23.3 22h-6.9l-5.4-6.6L4.4 22H1.3l8.1-9.3L1 2h7.1l4.9 6.1L18.9 2zm-1.2 18h1.9L7.4 4H5.4l12.3 16z"/></svg></a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="w-10 h-10 rounded-full border border-[#4a4230] grid place-items-center hover:bg-gold hover:text-white transition-colors"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
-      </div></div>
-    </div>
-    <div class="max-w-[1200px] mx-auto px-6 py-6 border-t border-[#3a3323] flex flex-wrap justify-between gap-3 text-[.8rem] text-[#9d957f]">
-      <span>&copy; 2019&ndash;<span id="y"></span> G. Omachi &amp; Co. (Barristers and Solicitors). All rights reserved.</span>
-      <span class="max-w-[52ch]">Nothing on this website is legal advice. Contacting us does not create a lawyer-client relationship.</span>
-    </div>
-  </section>
-</main>
+      </section>
+    </main>
 
-<script>
-document.getElementById('y').textContent=new Date().getFullYear();
-var t=document.querySelector('.marq .tr .repeat');t.parentNode.innerHTML+=t.parentNode.innerHTML;
-var siteHeader=document.getElementById('siteHeader');
-function onHeaderScroll(){siteHeader.classList.toggle('scrolled', window.scrollY > 80);}
-window.addEventListener('scroll', onHeaderScroll, {passive:true});
-onHeaderScroll();
-var mb=document.getElementById('menuBtn'),m=document.getElementById('menu'),mo=document.getElementById('menuOverlay'),mc=document.getElementById('menuClose');
-function setMenu(o){m.classList.toggle('open',o);mo.classList.toggle('open',o);mb.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''}
-mb.onclick=function(){setMenu(!m.classList.contains('open'))};
-mc.onclick=function(){setMenu(false)};
-mo.onclick=function(){setMenu(false)};
-document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
-m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
-document.getElementById('nl').onsubmit=function(e){e.preventDefault();this.reset();document.getElementById('ok').classList.remove('hidden')};
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+      var t = document.querySelector(".marq .tr .repeat");
+      t.parentNode.innerHTML += t.parentNode.innerHTML;
+      var siteHeader = document.getElementById("siteHeader");
+      function onHeaderScroll() {
+        siteHeader.classList.toggle("scrolled", window.scrollY > 80);
+      }
+      window.addEventListener("scroll", onHeaderScroll, { passive: true });
+      onHeaderScroll();
+      var mb = document.getElementById("menuBtn"),
+        m = document.getElementById("menu"),
+        mo = document.getElementById("menuOverlay"),
+        mc = document.getElementById("menuClose");
+      function setMenu(o) {
+        m.classList.toggle("open", o);
+        mo.classList.toggle("open", o);
+        mb.setAttribute("aria-expanded", o);
+        document.body.style.overflow = o ? "hidden" : "";
+      }
+      mb.onclick = function () {
+        setMenu(!m.classList.contains("open"));
+      };
+      mc.onclick = function () {
+        setMenu(false);
+      };
+      mo.onclick = function () {
+        setMenu(false);
+      };
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") setMenu(false);
+      });
+      m.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () {
+          setMenu(false);
+        });
+      });
+      document.getElementById("nl").onsubmit = function (e) {
+        e.preventDefault();
+        this.reset();
+        document.getElementById("ok").classList.remove("hidden");
+      };
 
-// Desktop "Explore" popover menu: position under its button, rotate chevron
-var nd=document.querySelector('.navdrop'),ndBtn=document.querySelector('.navdrop-btn'),ndPanel=document.getElementById('exploreMenu');
-ndPanel.addEventListener('toggle',function(e){
-  var open=e.newState==='open';
-  nd.classList.toggle('open',open);
-  ndBtn.setAttribute('aria-expanded',open);
-  if(open){
-    var r=ndBtn.getBoundingClientRect();
-    ndPanel.style.top=(r.bottom+8)+'px';
-    var panelW=Math.min(460,window.innerWidth-32);
-    ndPanel.style.left=Math.max(8,Math.min(r.left-10,window.innerWidth-panelW-16))+'px';
-  }
-});
-
-// Stat counters animate up once when scrolled into view
-var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var statEls=document.querySelectorAll('.stat-num');
-if(statEls.length){
-  if(reduceMotion){
-    statEls.forEach(function(el){el.textContent=el.dataset.count+(el.dataset.suffix||'')});
-  }else{
-    var statObserver=new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(!entry.isIntersecting)return;
-        var el=entry.target,target=parseInt(el.dataset.count,10),suffix=el.dataset.suffix||'',start=null,dur=900;
-        function step(ts){
-          if(!start)start=ts;
-          var p=Math.min((ts-start)/dur,1);
-          var eased=1-Math.pow(1-p,3);
-          el.textContent=Math.round(eased*target)+(p>=1?suffix:'');
-          if(p<1)requestAnimationFrame(step);
+      // Desktop "Explore" popover menu: position under its button, rotate chevron
+      var nd = document.querySelector(".navdrop"),
+        ndBtn = document.querySelector(".navdrop-btn"),
+        ndPanel = document.getElementById("exploreMenu");
+      ndPanel.addEventListener("toggle", function (e) {
+        var open = e.newState === "open";
+        nd.classList.toggle("open", open);
+        ndBtn.setAttribute("aria-expanded", open);
+        if (open) {
+          var r = ndBtn.getBoundingClientRect();
+          ndPanel.style.top = r.bottom + 8 + "px";
+          var panelW = Math.min(460, window.innerWidth - 32);
+          ndPanel.style.left =
+            Math.max(
+              8,
+              Math.min(r.left - 10, window.innerWidth - panelW - 16),
+            ) + "px";
         }
-        requestAnimationFrame(step);
-        statObserver.unobserve(el);
       });
-    },{threshold:.6});
-    statEls.forEach(function(el){statObserver.observe(el)});
-  }
-}
 
-// Lawyer grid: show first two on mobile, reveal the rest on click
-var teamBtn=document.getElementById('teamShowMore'),teamGrid=document.getElementById('teamGrid');
-if(teamBtn&&teamGrid){
-  teamBtn.addEventListener('click',function(){
-    var expanded=teamGrid.classList.toggle('expanded');
-    teamBtn.classList.toggle('is-expanded',expanded);
-    teamBtn.firstChild.textContent=expanded?'Show fewer team members ':'See all team members ';
-  });
-}
+      // Stat counters animate up once when scrolled into view
+      var reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+      var statEls = document.querySelectorAll(".stat-num");
+      if (statEls.length) {
+        if (reduceMotion) {
+          statEls.forEach(function (el) {
+            el.textContent = el.dataset.count + (el.dataset.suffix || "");
+          });
+        } else {
+          var statObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                var el = entry.target,
+                  target = parseInt(el.dataset.count, 10),
+                  suffix = el.dataset.suffix || "",
+                  start = null,
+                  dur = 900;
+                function step(ts) {
+                  if (!start) start = ts;
+                  var p = Math.min((ts - start) / dur, 1);
+                  var eased = 1 - Math.pow(1 - p, 3);
+                  el.textContent =
+                    Math.round(eased * target) + (p >= 1 ? suffix : "");
+                  if (p < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+                statObserver.unobserve(el);
+              });
+            },
+            { threshold: 0.6 },
+          );
+          statEls.forEach(function (el) {
+            statObserver.observe(el);
+          });
+        }
+      }
 
-// Reveal each section's content only once the user scrolls to it (not on page load)
-var revealEls=document.querySelectorAll('.reveal, .reveal-stagger');
-if(revealEls.length){
-  if(reduceMotion){
-    revealEls.forEach(function(el){el.classList.add('in-view')});
-  }else{
-    var revealObserver=new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){entry.target.classList.add('in-view');revealObserver.unobserve(entry.target)}
+      // Lawyer grid: show first two on mobile, reveal the rest on click
+      var teamBtn = document.getElementById("teamShowMore"),
+        teamGrid = document.getElementById("teamGrid");
+      if (teamBtn && teamGrid) {
+        teamBtn.addEventListener("click", function () {
+          var expanded = teamGrid.classList.toggle("expanded");
+          teamBtn.classList.toggle("is-expanded", expanded);
+          teamBtn.firstChild.textContent = expanded
+            ? "Show fewer team members "
+            : "See all team members ";
+        });
+      }
+
+      // Reveal each section's content only once the user scrolls to it (not on page load)
+      var revealEls = document.querySelectorAll(".reveal, .reveal-stagger");
+      if (revealEls.length) {
+        if (reduceMotion) {
+          revealEls.forEach(function (el) {
+            el.classList.add("in-view");
+          });
+        } else {
+          var revealObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("in-view");
+                  revealObserver.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.15, rootMargin: "0px 0px -8% 0px" },
+          );
+          revealEls.forEach(function (el) {
+            revealObserver.observe(el);
+          });
+        }
+      }
+
+      // Contact form validation + mailto handoff
+      var cf = document.getElementById("contactForm");
+      var CONTACT_EMAIL = "info@g-omachi.com";
+      cf.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var valid = true;
+        cf.querySelectorAll("[required]").forEach(function (f) {
+          var errSpan = f.closest("label")
+            ? f.closest("label").querySelector(".err")
+            : null;
+          var ok = f.checkValidity();
+          if (!ok) {
+            valid = false;
+          }
+          if (errSpan) {
+            errSpan.classList.toggle("hidden", ok);
+          }
+        });
+        document.getElementById("formOk").classList.add("hidden");
+        document.getElementById("formErr").classList.add("hidden");
+        if (valid) {
+          var fd = new FormData(cf);
+          var name = (fd.get("name") || "").trim();
+          var phone = (fd.get("phone") || "").trim();
+          var email = (fd.get("email") || "").trim();
+          var area = (fd.get("area") || "").trim();
+          var message = (fd.get("message") || "").trim();
+          var subject = "Website enquiry from " + name + " \u2014 " + area;
+          var body =
+            "New enquiry submitted via the G. Omachi & Co website contact form.\n\n" +
+            "Name: " +
+            name +
+            "\n" +
+            "Phone: " +
+            phone +
+            "\n" +
+            "Email: " +
+            email +
+            "\n" +
+            "Practice area: " +
+            area +
+            "\n\n" +
+            "Message:\n" +
+            message +
+            "\n";
+          var mailtoLink =
+            "mailto:" +
+            encodeURIComponent(CONTACT_EMAIL) +
+            "?subject=" +
+            encodeURIComponent(subject) +
+            "&body=" +
+            encodeURIComponent(body);
+          window.location.href = mailtoLink;
+          cf.reset();
+          document.getElementById("formOk").classList.remove("hidden");
+        } else {
+          document.getElementById("formErr").classList.remove("hidden");
+        }
       });
-    },{threshold:.15,rootMargin:'0px 0px -8% 0px'});
-    revealEls.forEach(function(el){revealObserver.observe(el)});
-  }
-}
-
-// Contact form validation + mailto handoff
-var cf=document.getElementById('contactForm');
-var CONTACT_EMAIL='info@g-omachi.com';
-cf.addEventListener('submit',function(e){
-  e.preventDefault();
-  var valid=true;
-  cf.querySelectorAll('[required]').forEach(function(f){
-    var errSpan=f.closest('label')?f.closest('label').querySelector('.err'):null;
-    var ok=f.checkValidity();
-    if(!ok){valid=false;}
-    if(errSpan){errSpan.classList.toggle('hidden',ok);}
-  });
-  document.getElementById('formOk').classList.add('hidden');
-  document.getElementById('formErr').classList.add('hidden');
-  if(valid){
-    var fd=new FormData(cf);
-    var name=(fd.get('name')||'').trim();
-    var phone=(fd.get('phone')||'').trim();
-    var email=(fd.get('email')||'').trim();
-    var area=(fd.get('area')||'').trim();
-    var message=(fd.get('message')||'').trim();
-    var subject='Website enquiry from '+name+' \u2014 '+area;
-    var body=
-      'New enquiry submitted via the G. Omachi & Co website contact form.\n\n'+
-      'Name: '+name+'\n'+
-      'Phone: '+phone+'\n'+
-      'Email: '+email+'\n'+
-      'Practice area: '+area+'\n\n'+
-      'Message:\n'+message+'\n';
-    var mailtoLink='mailto:'+encodeURIComponent(CONTACT_EMAIL)+
-      '?subject='+encodeURIComponent(subject)+
-      '&body='+encodeURIComponent(body);
-    window.location.href=mailtoLink;
-    cf.reset();
-    document.getElementById('formOk').classList.remove('hidden');
-  }else{
-    document.getElementById('formErr').classList.remove('hidden');
-  }
-});
-</script>
-</body>
+    </script>
+  </body>
 </html>

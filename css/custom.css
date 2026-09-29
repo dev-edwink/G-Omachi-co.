@@ -1,4 +1,3 @@
-
 @font-face{
   font-family: 'Gilroy', 'Plus Jakarta Sans', 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   src:url('fonts/Gilroy-SemiBold.woff2') format('woff2'),
@@ -186,3 +185,148 @@ button,input,select,textarea{font-family:inherit}
 /* Back-to-home link used on practice-area and lawyer profile pages */
 .back-home{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;font-weight:600;color:#8a6512;margin-bottom:1.25rem;transition:gap .2s ease,color .2s ease}
 .back-home:hover{gap:.75rem;color:#c9a227}
+
+/* =====================================================================
+   Page-specific styles (moved from inline <style> blocks).
+   Keep at the END of this file: several rules override the ones above.
+   ===================================================================== */
+/* ---------- Shared: all pages with the mobile menu ---------- */
+html{-webkit-text-size-adjust:100%}
+#menu{height:100%;height:100dvh;min-height:0;overscroll-behavior:contain}
+#menu>div:last-child{padding-bottom:calc(24px + env(safe-area-inset-bottom,0px))}
+
+/* ---------- Home page (index.html) ---------- */
+/* Team grid: show first three, reveal the rest on click */
+#teamGrid .team-extra{display:none}
+#teamGrid.expanded .team-extra{display:block}
+#teamShowMore.is-expanded .arrow-caret{transform:rotate(180deg)}
+@media(min-width:640px) and (max-width:767px){#teamGrid{grid-template-columns:1fr}}
+
+/* About section: buttons on one row, stats row */
+#about .ab-btns{flex-wrap:nowrap;gap:8px}
+@media(max-width:639px){
+  #about .ab-btns a{flex:1 1 auto;display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 14px;font-size:.84rem;line-height:1.1;text-align:center;white-space:nowrap}
+}
+@media(min-width:640px){
+  #about .ab-btns a{flex:0 0 auto;text-align:center;white-space:nowrap;padding:12px 24px;font-size:.95rem}
+}
+
+/* Office card images */
+.office-img.office-img{height:190px}
+@media(min-width:768px){.office-img.office-img{height:220px}}
+
+/* Mobile layout tweaks */
+@media(max-width:767px){
+  .hero-box.hero-box{min-height:min(100svh,720px)}
+  #about,#attorneys,#why,#offices,#contact-form{padding-top:56px;padding-bottom:56px}
+  #about .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-bottom:28px}
+  #about .stat-row>div{padding:2px 10px 2px 12px;border-left:1px solid rgba(0,0,0,.14)}
+  #about .stat-row>div:first-child{padding-left:0;border-left:0}
+  #about .stat-row .stat-num{font-size:2.25rem;line-height:1;letter-spacing:-.02em;margin-bottom:8px}
+  #about .stat-row span{display:block;font-size:.78rem;line-height:1.35}
+  #areas .grid{grid-template-columns:1fr;gap:12px}
+  #areas .tile{height:112px}
+  #areas .tile>div:last-child{flex-direction:row;align-items:flex-end;justify-content:space-between;padding:16px 18px}
+  #areas .tile .arrow{margin-top:0}
+  #contactForm{padding:20px}
+  #contactForm button[type=submit]{width:100%;justify-self:stretch}
+  .fld,#nl input{font-size:16px}
+  #nl .grid-cols-2{grid-template-columns:1fr}
+  #contact li a{display:inline-block;padding:5px 0}
+}
+
+/* Explore dropdown (desktop nav) */
+body #exploreMenu{margin:0;inset:auto;position:fixed;width:min(340px,calc(100vw - 32px));padding:14px 22px 10px;background:#fff;border:0;border-top:2px solid var(--color-gold,#c9a227);border-radius:0 0 3px 3px;box-shadow:0 18px 40px -18px rgba(20,17,10,.35);overflow:visible}
+body #exploreMenu:not(:popover-open){display:none}
+body #exploreMenu,
+body #exploreMenu a,
+body #exploreMenu .dd-title{color:var(--color-ink,#1f1a10)!important}
+body #exploreMenu .dd-heading{margin:0 0 4px;font-size:.78rem;font-weight:600;letter-spacing:.02em;color:var(--color-brass,#8a6512)!important}
+body #exploreMenu .dd-areas{list-style:none;margin:0;padding:0;display:block}
+body #exploreMenu .dd-areas li{margin:0;padding:0;border:0}
+body #exploreMenu .dd-areas a{display:flex;align-items:center;gap:0;padding:11px 0;font-family:'Newsreader',Georgia,serif;font-size:1.08rem;line-height:1.3;transition:color .15s,gap .2s}
+body #exploreMenu .dd-areas a::before{content:"";flex:none;width:0;height:2px;background:var(--color-gold,#c9a227);transition:width .2s}
+body #exploreMenu .dd-areas a:hover,
+body #exploreMenu .dd-areas a:focus-visible,
+body #exploreMenu .dd-office:hover .dd-title{color:var(--color-brass,#8a6512)!important}
+body #exploreMenu .dd-areas a:hover,
+body #exploreMenu .dd-areas a:focus-visible{gap:12px}
+body #exploreMenu .dd-areas a:hover::before,
+body #exploreMenu .dd-areas a:focus-visible::before{width:18px}
+body #exploreMenu .dd-divider{height:1px;margin:6px 0 2px;background:rgba(0,0,0,.1)}
+body #exploreMenu .dd-office{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+body #exploreMenu .dd-copy{display:flex;flex-direction:column;gap:1px}
+body #exploreMenu .dd-title{font-family:'Newsreader',Georgia,serif;font-size:1.08rem}
+body #exploreMenu .dd-sub{font-size:.8rem;color:var(--color-muted,#5f5847)!important}
+body #exploreMenu .dd-go{color:var(--color-gold,#c9a227)!important;transition:transform .2s}
+body #exploreMenu .dd-office:hover .dd-go{transform:translateX(4px)}
+@media(prefers-reduced-motion:reduce){body #exploreMenu *{transition:none!important}}
+
+/* ---------- About page (about.html) ---------- */
+.about-page main h2{font-size:1.75rem;line-height:1.2;letter-spacing:-.01em}
+
+/* Intro */
+.ab-intro-grid{display:grid;grid-template-columns:1fr;gap:32px}
+.ab-intro-grid>div{max-width:none}
+.ab-intro h1{font-size:clamp(1.75rem,4.6vw,2.6rem);font-weight:500;line-height:1.1;letter-spacing:-.02em;max-width:none;margin:0 0 1.5rem;text-align:left;text-wrap:wrap}
+.ab-intro-grid p{font-family:inherit;font-weight:400;font-size:1.1rem;line-height:1.8;max-width:none;margin-bottom:1.25rem}
+.ab-br{display:none}
+@media(min-width:640px){.ab-br{display:inline}}
+@media(max-width:767px){.ab-intro.ab-intro{padding-top:96px}}
+
+/* Mission & vision */
+.ab-mv{display:grid;gap:16px}
+.ab-mv-item{position:relative;border-radius:2px;padding:26px 24px 26px 28px}
+.ab-mv-item::before{content:"";position:absolute;left:0;top:22px;bottom:22px;width:3px;background:currentColor}
+.ab-mv-label{font-size:.9rem;letter-spacing:.03em;margin:0 0 10px}
+.ab-mv-text{font-size:clamp(1.15rem,3.6vw,1.4rem);line-height:1.5;font-weight:400;margin:0;text-wrap:pretty}
+@media(min-width:768px){.ab-mv{grid-template-columns:1fr 1fr;gap:24px}.ab-mv-item{padding:32px 32px 32px 36px}}
+
+/* What we do */
+.ab-list,.ab-people{list-style:none;margin:0;padding:0}
+.ab-row{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:18px 0;align-items:center}
+.ab-row h3{margin:0;font-size:1.25rem;line-height:1.25}
+.ab-row p{grid-column:1;margin:0;font-size:.95rem;line-height:1.6}
+.ab-row span{grid-column:2;grid-row:1/3}
+@media(min-width:768px){
+  .ab-row{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) auto;gap:24px;padding:22px 0}
+  .ab-row p,.ab-row span{grid-column:auto;grid-row:auto}
+}
+
+/* Our people */
+.ab-people{display:grid;gap:10px;grid-template-columns:1fr}
+.ab-person{display:flex;align-items:center;gap:14px;padding:12px 14px;min-height:64px}
+.ab-person>span:last-child{min-width:0}
+.ab-person b{display:block;font-weight:400;font-size:1.1rem;line-height:1.25}
+.ab-ini{flex:none;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:.95rem}
+@media(min-width:640px){.ab-people{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.ab-people{grid-template-columns:repeat(3,1fr)}}
+
+/* Why choose us */
+.ab-why{display:grid;grid-template-columns:1fr;gap:0 48px}
+.ab-why>div{padding:18px 0}
+.ab-why h3{font-size:1.2rem;line-height:1.25}
+.ab-why p{margin:4px 0 0;font-size:.975rem;line-height:1.65}
+@media(min-width:768px){.ab-why{grid-template-columns:1fr 1fr}}
+
+/* Commitment band */
+.ab-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px}
+.ab-cta h3{font-size:1.5rem;line-height:1.25}
+.ab-cta p{font-size:1rem;line-height:1.7}
+.ab-cta-btns{display:flex;flex-wrap:wrap;gap:12px}
+.ab-cta .ab-cta-btns a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 22px;font-size:.95rem;white-space:nowrap}
+@media(max-width:640px){
+  .ab-cta{gap:20px}
+  .ab-cta-btns{flex-direction:column;width:100%}
+  .ab-cta .ab-cta-btns a{flex:none;width:100%;min-height:52px;padding:0 24px;font-size:1rem}
+}
+@media(max-width:480px){.about-page main h2{font-size:1.55rem}}
+
+/* ---------- Practice pages: image banner + title ---------- */
+.pg-hero{position:relative}
+.pg-hero-title{position:absolute;left:24px;bottom:24px;margin:0}
+@media(max-width:639px){
+  .pg-hero .pg-hero-img{height:220px}
+  .pg-hero .pg-hero-scrim{display:none}
+  .pg-hero .pg-hero-title{position:static;color:inherit;margin-top:20px;font-size:1.85rem;line-height:1.15;max-width:none}
+}
