@@ -393,7 +393,10 @@ body #exploreMenu .dd-office:hover .dd-go{transform:translateX(4px)}
 .site-footer,.site-footer *{box-sizing:border-box}
 .site-footer .sf-wrap{width:100%;max-width:none;margin:0;padding-left:clamp(24px,5vw,80px);padding-right:clamp(24px,5vw,80px)}
 .site-footer .sf-grid>*{min-width:0}
-.site-footer .sf-grid{display:grid;gap:2rem;padding-top:48px;padding-bottom:40px}
+.site-footer .sf-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 1.25rem;padding-top:36px;padding-bottom:28px}
+.site-footer .sf-grid>:first-child,.site-footer .sf-grid>:last-child{grid-column:1/-1}
+.site-footer p,.site-footer a{overflow-wrap:anywhere}
+.site-footer li a{display:inline-block;padding:.15rem 0}
 .site-footer .sf-name{margin:0 0 .6rem;color:#fff;font:700 1.25rem 'Gilroy','Plus Jakarta Sans','Instrument Sans',sans-serif}
 .site-footer h4{margin:0 0 .75rem;color:#fff;font-size:1rem;font-weight:600}
 .site-footer p{margin:0 0 .5rem}
@@ -411,8 +414,9 @@ body #exploreMenu .dd-office:hover .dd-go{transform:translateX(4px)}
 .site-footer .sf-office b{display:block;margin-bottom:.1rem}
 .site-footer .sf-hours{color:#9d957f;font-size:.85rem}
 .site-footer h4{padding-bottom:.5rem;border-bottom:1px solid #3a3323}
-@media(min-width:640px){.site-footer .sf-grid{grid-template-columns:1fr 1fr}}
-@media(min-width:960px){.site-footer .sf-grid{grid-template-columns:1.5fr 1fr 1fr 1fr}}
+@media(max-width:639px){.site-footer .sf-bar{flex-direction:column;gap:.5rem}.site-footer .sf-bar span:last-child{max-width:none}}
+@media(min-width:640px){.site-footer .sf-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;padding-top:48px;padding-bottom:40px}.site-footer .sf-grid>:last-child{grid-column:auto}}
+@media(min-width:960px){.site-footer .sf-grid{grid-template-columns:1.5fr 1fr 1fr 1fr}.site-footer .sf-grid>:first-child{grid-column:auto}}
 
 /* ===== Newsletter message + button spinner ===== */
 .nl-msg{margin:0;padding:.75rem 1rem;border-radius:8px;border-left:4px solid;font-size:.9rem;font-weight:500;line-height:1.5}
